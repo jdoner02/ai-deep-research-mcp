@@ -223,6 +223,18 @@ test-results/
 coverage_logs/
 tdd_logs/
 
+# Development environment
+venv/
+.venv/
+env/
+ENV/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
 # LaTeX files
 *.aux
 *.log
@@ -234,3 +246,16 @@ tdd_logs/
 # Backup files
 *.bak
 *.backup
+
+# Development artifacts
+debug_*.py
+temp_*.py
+scratch_*.py
+
+# Vector store data (exclude from repo)
+data/vector_store/
+web_interface/data/vector_store/
+
+# Logs
+*.log
+logs/

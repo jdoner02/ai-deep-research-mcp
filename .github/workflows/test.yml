@@ -1,4 +1,4 @@
-name: Test Suite
+name: 🧪 Test Suite & Quality Assurance
 
 on:
   push:
@@ -6,132 +6,363 @@ on:
   pull_request:
     branches: [ main, master ]
   workflow_dispatch:
+  schedule:
+    - cron: '0 2 * * 1'  # Weekly on Monday at 2 AM UTC
+
+env:
+  FORCE_COLOR: 1
+  PIP_DISABLE_PIP_VERSION_CHECK: 1
+  PYTHONUNBUFFERED: 1
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    name: Test Python ${{ matrix.python-version }} on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
     strategy:
+      fail-fast: false
       matrix:
-        python-version: [3.9, 3.10, 3.11, 3.12]
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python-version: ['3.9', '3.10', '3.11', '3.12']
+        exclude:
+          # Exclude some combinations to reduce CI time
+          - os: windows-latest
+            python-version: '3.9'
+          - os: windows-latest
+            python-version: '3.10'
+          - os: macos-latest
+            python-version: '3.9'
+          - os: macos-latest
+            python-version: '3.10'
 
     steps:
-    - uses: actions/checkout@v4
+    - name: 📥 Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # Full history for better analysis
 
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v4
+    - name: 🐍 Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v5
       with:
         python-version: ${{ matrix.python-version }}
+        cache: 'pip'
 
-    - name: Install dependencies
+    - name: 📦 Install dependencies
       run: |
-        python -m pip install --upgrade pip
-        pip install pytest pytest-cov pytest-asyncio
+        python -m pip install --upgrade pip setuptools wheel
+        pip install pytest pytest-cov pytest-asyncio pytest-xdist pytest-timeout
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
         if [ -f requirements-dev.txt ]; then pip install -r requirements-dev.txt; fi
 
-    - name: Install package dependencies
+    - name: 🔧 Install research dependencies
       run: |
         pip install requests beautifulsoup4 lxml feedparser
-        pip install sentence-transformers transformers torch
-        pip install chromadb faiss-cpu numpy
-        pip install PyMuPDF python-docx
-        pip install ddgs
+        pip install sentence-transformers transformers torch --index-url https://download.pytorch.org/whl/cpu
+        pip install chromadb faiss-cpu numpy pandas
+        pip install PyMuPDF python-docx pypdf
+        pip install ddgs duckduckgo-search
         
-    - name: Run tests with pytest
+    - name: 🧪 Run tests with pytest
+      timeout-minutes: 30
       run: |
-        pytest tests/ -v --tb=short --cov=src --cov-report=xml --cov-report=term-missing
+        pytest tests/ \
+          -v \
+          --tb=short \
+          --cov=src \
+          --cov-report=xml \
+          --cov-report=term-missing \
+          --cov-report=html \
+          --junitxml=test-results-${{ matrix.python-version }}-${{ matrix.os }}.xml \
+          --durations=10 \
+          --timeout=300 \
+          -n auto
       continue-on-error: false
 
-    - name: Upload coverage reports to Codecov
-      if: matrix.python-version == '3.11'
-      uses: codecov/codecov-action@v3
+    - name: 📊 Upload test results
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: test-results-${{ matrix.python-version }}-${{ matrix.os }}
+        path: |
+          test-results-*.xml
+          htmlcov/
+          coverage.xml
+
+    - name: 📈 Upload coverage to Codecov
+      if: matrix.python-version == '3.11' && matrix.os == 'ubuntu-latest'
+      uses: codecov/codecov-action@v4
       with:
         file: ./coverage.xml
         flags: unittests
         name: codecov-umbrella
         fail_ci_if_error: false
+        token: ${{ secrets.CODECOV_TOKEN }}
 
-  lint:
+  quality:
+    name: 🔍 Code Quality & Formatting
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - name: 📥 Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
+    - name: 🐍 Set up Python
+      uses: actions/setup-python@v5
       with:
         python-version: '3.11'
+        cache: 'pip'
 
-    - name: Install linting dependencies
+    - name: 📦 Install quality tools
       run: |
         python -m pip install --upgrade pip
-        pip install flake8 black isort mypy
+        pip install black==23.* isort==5.* flake8==6.* mypy==1.*
+        pip install flake8-docstrings flake8-import-order flake8-bugbear
+        pip install vulture # Dead code detection
 
-    - name: Run flake8
-      run: flake8 src/ tests/ --max-line-length=100 --ignore=E203,W503
+    - name: 🎨 Check code formatting with Black
+      run: black --check --diff src/ tests/
 
-    - name: Check code formatting with black
-      run: black --check src/ tests/
+    - name: 📋 Check import sorting with isort
+      run: isort --check-only --diff src/ tests/
 
-    - name: Check import sorting with isort
-      run: isort --check-only src/ tests/
+    - name: 🔍 Run flake8 linting
+      run: |
+        flake8 src/ tests/ \
+          --max-line-length=88 \
+          --extend-ignore=E203,W503,E501 \
+          --max-complexity=10 \
+          --statistics
 
-    - name: Run type checking with mypy
-      run: mypy src/ --ignore-missing-imports
+    - name: 🏷️ Run type checking with mypy
+      run: |
+        mypy src/ \
+          --ignore-missing-imports \
+          --show-error-codes \
+          --pretty \
+          --show-column-numbers
+      continue-on-error: true
+
+    - name: 💀 Find dead code with vulture
+      run: vulture src/ --min-confidence 80
       continue-on-error: true
 
   security:
+    name: 🔒 Security Analysis
     runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+      actions: read
+      contents: read
+    
     steps:
-    - uses: actions/checkout@v4
+    - name: 📥 Checkout repository
+      uses: actions/checkout@v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
+    - name: 🐍 Set up Python
+      uses: actions/setup-python@v5
       with:
         python-version: '3.11'
+        cache: 'pip'
 
-    - name: Install security tools
+    - name: 🛡️ Install security tools
       run: |
         python -m pip install --upgrade pip
-        pip install bandit safety
+        pip install bandit[toml]==1.* safety==2.* semgrep
 
-    - name: Run bandit security linter
-      run: bandit -r src/ -f json -o bandit-report.json
+    - name: 🕵️ Run Bandit security scan
+      run: |
+        bandit -r src/ \
+          -f json \
+          -o bandit-report.json \
+          --severity-level medium \
+          --confidence-level medium
       continue-on-error: true
 
-    - name: Run safety check
-      run: safety check
-      continue-on-error: true
+    - name: 🔐 Run Safety dependency check
+      run: |
+        safety check \
+          --json \
+          --output safety-report.json \
+          || true
+
+    - name: 🔎 Run Semgrep SAST
+      run: |
+        semgrep --config=auto src/ \
+          --json \
+          --output=semgrep-report.json \
+          --severity=ERROR \
+          || true
+
+    - name: 📤 Upload security reports
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: security-reports
+        path: |
+          bandit-report.json
+          safety-report.json  
+          semgrep-report.json
+
+    - name: 🚨 Initialize CodeQL
+      uses: github/codeql-action/init@v3
+      with:
+        languages: python
+        queries: security-extended,security-and-quality
+
+    - name: 🏗️ Autobuild
+      uses: github/codeql-action/autobuild@v3
+
+    - name: 🧬 Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v3
+      with:
+        category: "/language:python"
 
   integration:
+    name: 🧩 Integration & E2E Tests
     runs-on: ubuntu-latest
-    needs: test
+    needs: [test, quality]
     if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
     
     steps:
-    - uses: actions/checkout@v4
+    - name: 📥 Checkout repository
+      uses: actions/checkout@v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
+    - name: 🐍 Set up Python
+      uses: actions/setup-python@v5
       with:
         python-version: '3.11'
+        cache: 'pip'
 
-    - name: Install dependencies
+    - name: 📦 Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install requests beautifulsoup4 lxml feedparser
-        pip install sentence-transformers transformers torch
-        pip install chromadb faiss-cpu numpy
-        pip install PyMuPDF python-docx
-        pip install ddgs pytest pytest-asyncio
+        pip install sentence-transformers transformers torch --index-url https://download.pytorch.org/whl/cpu
+        pip install chromadb faiss-cpu numpy pandas
+        pip install PyMuPDF python-docx pypdf
+        pip install ddgs pytest pytest-asyncio pytest-timeout
 
-    - name: Run integration tests
+    - name: 🔬 Run integration tests
+      timeout-minutes: 20
       run: |
-        python -m pytest tests/test_scholarly_integration.py -v -k "not test_github" --tb=short
+        python -m pytest tests/test_scholarly_integration.py \
+          -v \
+          -k "not test_github" \
+          --tb=short \
+          --timeout=300
       continue-on-error: true
 
-    - name: Test web interface
+    - name: 🌐 Setup Node.js for web interface
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+        cache-dependency-path: web_interface/package-lock.json
+
+    - name: 🧪 Test web interface
       run: |
         cd web_interface
-        npm install
-        npm test
+        npm ci
+        npm run test
+        npm run build
       continue-on-error: true
+
+    - name: 🔌 Test MCP Server integration
+      run: |
+        python -m pytest tests/test_mcp_server.py \
+          -v \
+          --tb=short \
+          --timeout=300
+      continue-on-error: true
+
+  performance:
+    name: ⚡ Performance Benchmarks
+    runs-on: ubuntu-latest
+    needs: test
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    
+    steps:
+    - name: 📥 Checkout repository
+      uses: actions/checkout@v4
+
+    - name: 🐍 Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+
+    - name: 📦 Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pytest pytest-benchmark memory-profiler
+        pip install requests beautifulsoup4 lxml feedparser
+        pip install sentence-transformers transformers torch --index-url https://download.pytorch.org/whl/cpu
+        pip install chromadb faiss-cpu numpy
+
+    - name: 🏃 Run performance benchmarks
+      run: |
+        python -m pytest tests/ \
+          -k "benchmark or performance" \
+          --benchmark-only \
+          --benchmark-json=benchmark-results.json
+      continue-on-error: true
+
+    - name: 📊 Upload benchmark results
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: benchmark-results
+        path: benchmark-results.json
+
+  docs:
+    name: 📚 Documentation Check
+    runs-on: ubuntu-latest
+    steps:
+    - name: 📥 Checkout repository
+      uses: actions/checkout@v4
+
+    - name: 🐍 Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+
+    - name: 📦 Install documentation tools
+      run: |
+        python -m pip install --upgrade pip
+        pip install sphinx sphinx-rtd-theme myst-parser
+        pip install pydocstyle doc8
+
+    - name: 📝 Check docstring style
+      run: pydocstyle src/
+      continue-on-error: true
+
+    - name: 📄 Check documentation syntax
+      run: doc8 docs/ README.md CONTRIBUTING.md
+      continue-on-error: true
+
+    - name: 🏗️ Build documentation
+      run: |
+        cd docs/
+        make html
+      continue-on-error: true
+
+  notify:
+    name: 📢 Notification Summary
+    runs-on: ubuntu-latest
+    needs: [test, quality, security, integration, performance, docs]
+    if: always()
+    
+    steps:
+    - name: 📊 Generate test summary
+      run: |
+        echo "## 🧪 CI/CD Pipeline Summary" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "| Job | Status |" >> $GITHUB_STEP_SUMMARY
+        echo "|-----|--------|" >> $GITHUB_STEP_SUMMARY
+        echo "| Tests | ${{ needs.test.result == 'success' && '✅ Passed' || needs.test.result == 'failure' && '❌ Failed' || '⚠️ Skipped' }} |" >> $GITHUB_STEP_SUMMARY
+        echo "| Quality | ${{ needs.quality.result == 'success' && '✅ Passed' || needs.quality.result == 'failure' && '❌ Failed' || '⚠️ Skipped' }} |" >> $GITHUB_STEP_SUMMARY
+        echo "| Security | ${{ needs.security.result == 'success' && '✅ Passed' || needs.security.result == 'failure' && '❌ Failed' || '⚠️ Skipped' }} |" >> $GITHUB_STEP_SUMMARY
+        echo "| Integration | ${{ needs.integration.result == 'success' && '✅ Passed' || needs.integration.result == 'failure' && '❌ Failed' || '⚠️ Skipped' }} |" >> $GITHUB_STEP_SUMMARY
+        echo "| Performance | ${{ needs.performance.result == 'success' && '✅ Passed' || needs.performance.result == 'failure' && '❌ Failed' || '⚠️ Skipped' }} |" >> $GITHUB_STEP_SUMMARY
+        echo "| Documentation | ${{ needs.docs.result == 'success' && '✅ Passed' || needs.docs.result == 'failure' && '❌ Failed' || '⚠️ Skipped' }} |" >> $GITHUB_STEP_SUMMARY
