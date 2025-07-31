@@ -1,0 +1,92 @@
+# Jekyll configuration for AI Deep Research MCP GitHub Pages site
+
+title: "AI Deep Research MCP"
+description: "Intelligent Academic Research with arXiv, Google Scholar & Semantic Scholar Integration"
+author: "AI Deep Research MCP Team"
+email: "contact@ai-deep-research-mcp.com"
+url: "https://jdoner02.github.io"
+baseurl: "/ai-deep-research-mcp"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Plugin configuration
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude files from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - LICENSE
+  - "*.py"
+  - "tests/"
+  - "src/"
+  - "__pycache__/"
+  - "*.pyc"
+
+# Include files that would normally be excluded
+include:
+  - _headers
+  - _redirects
+
+# Collections configuration
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:name/
+
+# Default configurations
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "docs"
+    values:
+      layout: "page"
+
+# SEO and social media
+twitter:
+  username: ai_deep_research
+  card: summary_large_image
+
+social:
+  name: AI Deep Research MCP
+  links:
+    - https://twitter.com/ai_deep_research
+    - https://github.com/jdoner02/ai-deep-research-mcp
+
+# Site configuration
+lang: en_US
+timezone: America/Los_Angeles
+
+# Analytics (if needed)
+# google_analytics: UA-XXXXXXXX-X
+
+# Custom variables
+research_engine:
+  version: "1.0.0"
+  supported_sources:
+    - "arXiv"
+    - "Google Scholar" 
+    - "Semantic Scholar"
+    - "Web Sources"
+  citation_styles:
+    - "APA"
+    - "MLA"
+    - "Chicago"
+    - "IEEE"
