@@ -1,74 +1,58 @@
 """
-Test configuration and fixtures for AI Deep Research MCP system
+Test configuration and fixtures for AI Deep Research MCP
 
-This file contains pytest configuration and shared fixtures used across
-all test modules in the Test Guardian Agent implementation.
+This file configures pytest for our educational research platform,
+providing shared fixtures and setup for all tests.
+
+Educational Note for Students:
+conftest.py is pytest's "shared testing setup" file - like having
+a toolbox that all your test rooms can share!
 """
 
-import pytest
-import tempfile
-import shutil
+import sys
+import os
 from pathlib import Path
-from unittest.mock import Mock
+
+# Add the project root to Python path so imports work correctly
+# This is like telling Python "hey, our main code is up here!"
+project_root = Path(__file__).parent.parent
+sys.path.insert(0, str(project_root))
+
+# Also add the src directory explicitly
+src_path = project_root / "src"
+if src_path.exists():
+    sys.path.insert(0, str(src_path))
+
+print(f"✅ Test setup complete - Python can now find our code!")
+print(f"   Project root: {project_root}")
+print(f"   Source path: {src_path}")
+
+import pytest
+from unittest.mock import Mock, AsyncMock
+
+# Global test fixtures that all tests can use
+# Think of these as "test helpers" available everywhere!
 
 
 @pytest.fixture
-def temp_dir():
-    """Create a temporary directory for test files"""
-    temp_path = tempfile.mkdtemp()
-    yield Path(temp_path)
-    shutil.rmtree(temp_path)
-
-
-@pytest.fixture
-def mock_llm_client():
-    """Mock LLM client for testing without actual LLM calls"""
-    mock_client = Mock()
-    mock_client.generate.return_value = "Mocked LLM response"
-    return mock_client
-
-
-@pytest.fixture
-def sample_documents():
-    """Sample documents for testing document processing"""
-    return [
-        {
-            "url": "https://example.com/doc1",
-            "title": "AI Research Overview",
-            "content": "Artificial intelligence is transforming industries. Machine learning algorithms are becoming more sophisticated."
+def mock_api_response():
+    """A fake API response for testing without hitting real servers"""
+    return {
+        "status": "success",
+        "data": {
+            "title": "Test Research Paper",
+            "abstract": "This is a test abstract for educational purposes.",
+            "authors": ["Dr. Test", "Prof. Example"],
+            "published_date": "2024-01-01",
         },
-        {
-            "url": "https://arxiv.org/abs/2024.01234",
-            "title": "Deep Learning Advances",
-            "content": "Recent advances in deep learning include transformer architectures and attention mechanisms."
-        }
-    ]
+    }
 
 
 @pytest.fixture
-def sample_chunks():
-    """Sample text chunks for testing embedding and retrieval"""
-    return [
-        {
-            "text": "Machine learning is a subset of artificial intelligence that focuses on algorithms.",
-            "source": "https://example.com/ml-intro",
-            "chunk_id": "chunk_1"
-        },
-        {
-            "text": "Deep learning uses neural networks with multiple layers to process data.",
-            "source": "https://example.com/dl-basics", 
-            "chunk_id": "chunk_2"
-        }
-    ]
-
-
-@pytest.fixture
-def mock_vector_store():
-    """Mock vector store for testing retrieval without actual embedding computation"""
-    mock_store = Mock()
-    mock_store.add_documents.return_value = True
-    mock_store.similarity_search.return_value = [
-        {"text": "Sample relevant text 1", "source": "source1"},
-        {"text": "Sample relevant text 2", "source": "source2"}
-    ]
-    return mock_store
+def sample_research_query():
+    """A sample research query for testing our search functionality"""
+    return {
+        "query": "artificial intelligence education",
+        "max_results": 10,
+        "source_types": ["arxiv", "semantic_scholar"],
+    }

@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Deep Research MCP - Real PDF Research System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Accessibility helper classes */
+        .visually-hidden {
+            position: absolute !important;
+            width: 1px !important;
+            height: 1px !important;
+            padding: 0 !important;
+            margin: -1px !important;
+            overflow: hidden !important;
+            clip: rect(0, 0, 0, 0) !important;
+            white-space: nowrap !important;
+            border: 0 !important;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header h2 {
+            font-size: 1.8em;
+            margin-bottom: 8px;
+        }
+
+        .header h3 {
+            font-size: 1.3em;
+            margin-bottom: 6px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .research-panel {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+        }
+
+        .query-section {
+            margin-bottom: 30px;
+        }
+
+        .query-section h2 {
+            color: #4a5568;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .query-input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 16px;
+            margin-bottom: 15px;
+            transition: border-color 0.3s;
+        }
+
+        .query-input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .research-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        .research-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .research-btn:disabled {
+            background: #cbd5e0;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* Interactive elements hover states */
+        .example-query {
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .example-query:hover {
+            background: #f7fafc;
+            transform: translateX(5px);
+        }
+
+        /* Error states */
+        .status-error {
+            background: #fed7d7;
+            color: #c53030;
+            border: 1px solid #feb2b2;
+            padding: 12px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+
+        /* Action buttons for results */
+        .result-actions {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .action-btn {
+            background: #48bb78;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        .action-btn:hover {
+            background: #38a169;
+            transform: translateY(-1px);
+        }
+
+        .options {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .option-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .option-group label {
+            font-weight: 500;
+            color: #4a5568;
+        }
+
+        .option-group input, .option-group select {
+            padding: 6px 10px;
+            border: 1px solid #e2e8f0;
+            border-radius: 5px;
+        }
+
+        .status-section {
+            margin-bottom: 30px;
+        }
+
+        .status-indicator {
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .status-idle {
+            background: #f7fafc;
+            color: #4a5568;
+            border: 2px solid #e2e8f0;
+        }
+
+        .status-running {
+            background: #fef5e7;
+            color: #d69e2e;
+            border: 2px solid #f6e05e;
+            animation: pulse 2s infinite;
+        }
+
+        .status-complete {
+            background: #f0fff4;
+            color: #38a169;
+            border: 2px solid #9ae6b4;
+        }
+
+        .status-error {
+            background: #fed7d7;
+            color: #e53e3e;
+            border: 2px solid #feb2b2;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+
+        .progress-log {
+            background: #1a202c;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            max-height: 300px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            line-height: 1.4;
+        }
+
+        .results-section {
+            margin-bottom: 30px;
+        }
+
+        .results-section h2 {
+            color: #4a5568;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+        }
+
+        .answer-box {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .answer-content {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #2d3748;
+        }
+
+        .sources-section {
+            margin-top: 30px;
+        }
+
+        .sources-section h3 {
+            color: #4a5568;
+            margin-bottom: 15px;
+        }
+
+        .source-item {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 10px;
+            transition: box-shadow 0.3s;
+        }
+
+        .source-item:hover {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .source-title {
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 5px;
+        }
+
+        .source-url {
+            color: #667eea;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .source-url:hover {
+            text-decoration: underline;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            color: #4a5568;
+            font-size: 14px;
+        }
+
+        .example-queries {
+            margin-top: 15px;
+        }
+
+        .example-queries h4 {
+            color: #4a5568;
+            margin-bottom: 10px;
+        }
+
+        .example-query {
+            display: inline-block;
+            background: #edf2f7;
+            color: #4a5568;
+            padding: 6px 12px;
+            margin: 4px;
+            border-radius: 15px;
+            font-size: 13px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .example-query:hover {
+            background: #e2e8f0;
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 30px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🔬 AI Deep Research MCP</h1>
+            <p>Real-time PDF Research System with Semantic Search</p>
+        </header>
+
+        <main class="research-panel">
+            <section class="query-section">
+                <h2>Research Query</h2>
+                <label for="queryInput" class="visually-hidden">Enter your research question</label>
+                <input type="text" 
+                       id="queryInput" 
+                       class="query-input" 
+                       placeholder="Enter your research question (e.g., 'Explain attention mechanisms in transformer neural networks')"
+                       value=""
+                       aria-label="Research query input"
+                       aria-describedby="queryHelp">
+                <div id="queryHelp" class="visually-hidden">Enter a detailed research question to get comprehensive, cited answers from academic sources</div>
+                
+                <div class="controls">
+                    <button id="researchBtn" class="research-btn">
+                        🔍 Start Research
+                    </button>
+                    
+                    <div class="options">
+                        <div class="option-group">
+                            <label for="maxUrls">Max URLs:</label>
+                            <select id="maxUrls">
+                                <option value="3">3</option>
+                                <option value="5" selected>5</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
+                        
+                        <div class="option-group">
+                            <label for="maxDepth">Depth:</label>
+                            <select id="maxDepth">
+                                <option value="1" selected>1</option>
+                                <option value="2">2</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="example-queries">
+                    <h3>Example Queries:</h3>
+                    <span class="example-query" style="cursor: pointer;" onclick="setQuery('AP Cyber')">AP Cybersecurity</span>
+                    <span class="example-query" style="cursor: pointer;" onclick="setQuery('network security fundamentals')">Network Security</span>
+                    <span class="example-query" style="cursor: pointer;" onclick="setQuery('cryptography basics')">Cryptography</span>
+                    <span class="example-query" style="cursor: pointer;" onclick="setQuery('information security principles')">Info Security</span>
+                    <span class="example-query" style="cursor: pointer;" onclick="setQuery('digital forensics')">Digital Forensics</span>
+                    <span class="example-query" style="cursor: pointer;" onclick="setQuery('cybersecurity careers')">Cyber Careers</span>
+            </section>
+
+            <section class="status-section">
+                <div id="statusIndicator" class="status-indicator status-idle">
+                    💤 Ready for Research
+                </div>
+                <div id="errorIndicator" class="status-error" style="display: none;">
+                    ⚠️ Error occurred during research
+                </div>
+                <div id="progressLog" class="progress-log">System initialized. Ready to process research queries.
+
+🔍 AI Deep Research MCP - Real PDF Research System
+==================================================
+
+Features:
+• Real-time PDF downloading from academic sources
+• Advanced text extraction and parsing  
+• Semantic embedding generation (384-dimensional vectors)
+• Vector database storage and retrieval
+• Intelligent semantic search with relevance scoring
+• Live progress monitoring with detailed activity logs
+
+Supported Sources:
+• arXiv.org (academic papers)
+• Scholar.google.com results
+• Research institution websites (.edu domains)
+• Open access journals and repositories
+
+Ready to start your research journey! 🚀
+</div>
+            </div>
+
+                        </section>
+
+            <section class="results-section" id="resultsSection" style="display: none;">
+                <h2>📊 Research Results</h2>
+                
+                <div class="result-actions">
+                    <button id="downloadBtn" class="action-btn">💾 Download Results</button>
+                    <button id="exportLogBtn" class="action-btn">📄 Export Progress Log</button>
+                </div>
+                
+                <div class="answer-box">
+                    <div id="answerContent" class="answer-content">
+                        <!-- Research answer will appear here -->
+                    </div>
+                </div>
+
+                <div class="stats" id="researchStats">
+                    <!-- Statistics will be populated here -->
+                </div>
+
+            </section>
+        </main>
+        </div>
+
+        <footer class="footer">
+            <p>Powered by AI Deep Research MCP • Built with Test-Driven Development</p>
+        </footer>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+        const queryInput = document.getElementById('queryInput');
+        const researchBtn = document.getElementById('researchBtn');
+        const statusIndicator = document.getElementById('statusIndicator');
+        const progressLog = document.getElementById('progressLog');
+        const resultsSection = document.getElementById('resultsSection');
+        const answerContent = document.getElementById('answerContent');
+        const researchStats = document.getElementById('researchStats');
+        const sourcesList = document.getElementById('sourcesList');
+
+        let isResearching = false;
+
+        // Set example query
+        function setQuery(query) {
+            queryInput.value = query;
+            queryInput.focus();
+        }
+
+        // Update status indicator
+        function updateStatus(status, message) {
+            statusIndicator.className = `status-indicator status-${status}`;
+            statusIndicator.textContent = message;
+        }
+
+        // Add log entry
+        function addLogEntry(message) {
+            progressLog.textContent += message + '\\n';
+            progressLog.scrollTop = progressLog.scrollHeight;
+        }
+
+        // Clear previous results
+        function clearResults() {
+            resultsSection.style.display = 'none';
+            answerContent.innerHTML = '';
+            researchStats.innerHTML = '';
+            sourcesList.innerHTML = '';
+        }
+
+        // Display research results
+        function displayResults(data) {
+            resultsSection.style.display = 'block';
+            
+            // Display answer
+            answerContent.innerHTML = data.answer || 'Research completed successfully!';
+            
+            // Display statistics
+            const stats = [
+                { label: 'Papers Processed', value: data.papers_processed || 0 },
+                { label: 'Chunks Stored', value: data.chunks_stored || 0 },
+                { label: 'Queries Tested', value: data.queries_tested || 0 },
+                { label: 'Processing Time', value: `${data.processing_time || 0}s` }
+            ];
+            
+            researchStats.innerHTML = stats.map(stat => `
+                <div class="stat-card">
+                    <span class="stat-number">${stat.value}</span>
+                    <span class="stat-label">${stat.label}</span>
+                </div>
+            `).join('');
+            
+            // Display sources
+            if (data.sources && data.sources.length > 0) {
+                sourcesList.innerHTML = data.sources.map(source => `
+                    <div class="source-item">
+                        <div class="source-title">${source.title || 'Academic Source'}</div>
+                        <a href="${source.url}" target="_blank" class="source-url">${source.url}</a>
+                    </div>
+                `).join('');
+            } else {
+                sourcesList.innerHTML = '<p>No sources available for this research session.</p>';
+            }
+        }
+
+        // Start research
+        function startResearch() {
+            const query = queryInput.value.trim();
+            if (!query) {
+                alert('Please enter a research query');
+                return;
+            }
+
+            if (isResearching) {
+                return;
+            }
+
+            isResearching = true;
+            researchBtn.disabled = true;
+            researchBtn.textContent = '🔄 Researching...';
+            
+            updateStatus('running', '🔄 Research in Progress');
+            addLogEntry(`\\n🔍 Starting research for: "${query}"`);
+            clearResults();
+
+            // Send research request
+            socket.emit('research_query', {
+                query: query,
+                max_urls: parseInt(document.getElementById('maxUrls').value),
+                max_depth: parseInt(document.getElementById('maxDepth').value)
+            });
+        }
+
+        // Socket event handlers
+        socket.on('research_progress', (data) => {
+            addLogEntry(`${data.timestamp} ${data.message}`);
+        });
+
+        socket.on('research_complete', (data) => {
+            isResearching = false;
+            researchBtn.disabled = false;
+            researchBtn.textContent = '🔍 Start Research';
+            
+            updateStatus('complete', '✅ Research Complete');
+            addLogEntry(`\\n🎉 Research completed successfully!`);
+            addLogEntry(`📊 Results: ${data.papers_processed} papers, ${data.chunks_stored} chunks, ${data.queries_tested} queries`);
+            
+            displayResults(data);
+        });
+
+        socket.on('research_error', (data) => {
+            isResearching = false;
+            researchBtn.disabled = false;
+            researchBtn.textContent = '🔍 Start Research';
+            
+            updateStatus('error', '❌ Research Failed');
+            addLogEntry(`\\n❌ Error: ${data.error}`);
+        });
+
+        // Event listeners
+        researchBtn.addEventListener('click', startResearch);
+        
+        queryInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                startResearch();
+            }
+        });
+
+        // Connection status
+        socket.on('connect', () => {
+            addLogEntry('🔗 Connected to research server');
+        });
+
+        socket.on('disconnect', () => {
+            addLogEntry('❌ Disconnected from research server');
+            if (isResearching) {
+                updateStatus('error', '❌ Connection Lost');
+                isResearching = false;
+                researchBtn.disabled = false;
+                researchBtn.textContent = '🔍 Start Research';
+            }
+        });
+    </script>
+</body>
+</html>

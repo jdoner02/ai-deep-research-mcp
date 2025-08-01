@@ -1,0 +1,54 @@
+{
+  "timestamp": "2025-07-31T20:15:53.742169",
+  "overall_status": "HEALTHY",
+  "checks": {
+    "Core Module Imports": {
+      "status": "PASS",
+      "message": "All core modules import successfully",
+      "duration_seconds": 0.0
+    },
+    "Domain Layer Health": {
+      "status": "PASS",
+      "message": "Domain entities working correctly",
+      "duration_seconds": 0.0
+    },
+    "Application Layer Health": {
+      "status": "PASS",
+      "message": "Application layer and citation export working",
+      "duration_seconds": 0.0
+    },
+    "Infrastructure Layer Health": {
+      "status": "PASS",
+      "message": "Infrastructure repositories working correctly",
+      "duration_seconds": 0.0
+    },
+    "Web Interface Health": {
+      "status": "PASS",
+      "message": "Web interface and API documentation working",
+      "duration_seconds": 0.0
+    },
+    "Citation Export Functionality": {
+      "status": "PASS",
+      "message": "All 4 citation formats working: {'bibtex': 'PASS', 'ris': 'PASS', 'endnote': 'PASS', 'apa': 'PASS'}",
+      "duration_seconds": 0.0
+    },
+    "System Performance": {
+      "status": "PASS",
+      "message": "Performance excellent: 261817 queries/sec",
+      "duration_seconds": 0.0
+    },
+    "File System Health": {
+      "status": "PASS",
+      "message": "All required files and directories present",
+      "duration_seconds": 0.0
+    },
+    "Git Repository Status": {
+      "status": "WARN",
+      "message": "Git repository has 234 uncommitted changes on branch 'main'",
+      "duration_seconds": 0.09
+    }
+  },
+  "pass_rate": 0.9444444444444444,
+  "passed_checks": 8.5,
+  "total_checks": 9
+}

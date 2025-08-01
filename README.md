@@ -1,44 +1,145 @@
-# AI Deep Research MCP
+# 🧠 AI Deep Research MCP - Educational Version
 
-![Tests](https://github.com/jdoner02/ai-deep-research-mcp/workflows/Test%20Suite/badge.svg)
-![GitHub Pages](https://github.com/jdoner02/ai-deep-research-mcp/workflows/Deploy%20to%20GitHub%20Pages/badge.svg)
+*Learn AI, Programming, and Research Systems by Building Real Tools!*
+
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
+![Educational](https://img.shields.io/badge/educational-middle%20school%2B-brightgreen.svg)
+![AI Research](https://img.shields.io/badge/AI-research%20system-orange.svg)
+![Status](https://img.shields.io/badge/status-educational%20complete-success.svg)
 
-**AI-powered deep research system with arXiv, Google Scholar, and Semantic Scholar integration**
+---
 
-🚀 **[Live Demo on GitHub Pages](https://jdoner02.github.io/ai-deep-research-mcp/)**
+## ✨ What Makes This Special?
 
-## Overview
+This is a **complete educational transformation** of a professional AI research system into the ultimate learning resource for students, educators, and researchers. We've created a comprehensive framework that teaches AI, programming, and software engineering through building a real, functional research system.
 
-AI Deep Research MCP is a comprehensive, self-hosted research system that mirrors the capabilities of Firecrawl's Deep Research tier. It autonomously crawls scholarly databases, processes academic papers, and generates detailed research summaries with proper citations.
+> **Perfect for**: Curious middle school students, high school computer science classes, college AI courses, and professors needing research tools.
 
-### Key Features
+### 🎓 **Educational Excellence Achieved**
 
-- 🎓 **Multi-Source Integration**: arXiv, Google Scholar, Semantic Scholar, and web sources
-- 📄 **PDF Processing**: Automatic download and text extraction from academic papers
-- 🔍 **Intelligent Search**: Query decomposition and multi-strategy search approaches
-- 📝 **Citation Management**: APA, MLA, Chicago, and IEEE citation formats
-- 🌐 **GitHub Pages Ready**: Client-side interface for public deployment
-- 🧪 **Test-Driven Development**: 181 comprehensive tests with 100% pass rate
+**22+ comprehensive learning modules** with professional analogies that make complex AI research concepts accessible to middle school students while maintaining industry relevance for professors and researchers.
 
-## Quick Start
+**Key Features**:
+- 🔬 **Real-World Analogies**: Healthcare diagnostics, master chef recipes, detective investigations
+- 💡 **Hands-On Learning**: 200+ complete code examples with full context  
+- 🏗️ **Professional Patterns**: Industry-standard design patterns and best practices
+- 📚 **Progressive Complexity**: Builds from simple concepts to enterprise-level systems
+- 🎯 **Dual Purpose**: Educational tool AND functional research platform
 
-### GitHub Pages (No Installation Required)
+---
 
-Visit **[https://jdoner02.github.io/ai-deep-research-mcp/](https://jdoner02.github.io/ai-deep-research-mcp/)** to use the research engine directly in your browser.
+## 🎯 What You'll Learn
 
-### Local Installation
+### 🐍 **Python Programming**
+- Object-oriented programming (classes, inheritance, polymorphism)
+- Professional code organization and design patterns
+- Error handling and debugging techniques
+- Testing and quality assurance
 
+### 🤖 **Artificial Intelligence Concepts**
+- How AI "understands" and processes text (Natural Language Processing)
+- Vector embeddings and semantic search (how computers find meaning)
+- Retrieval-Augmented Generation (RAG) - making AI answers more accurate
+- Large Language Models and how they work
+
+### 🏗️ **Software Engineering**
+- Professional project structure and organization
+- Version control with Git and GitHub
+- Continuous Integration/Continuous Deployment (CI/CD)
+- Documentation and collaborative development
+
+### 🔬 **Research and Data Science**
+- Web scraping and data collection techniques
+- Document processing and information extraction
+- Database design and vector storage
+- Citation management and academic standards
+
+---
+
+## � What You'll Build
+
+By the end of this learning journey, you'll have created a **complete AI research system** that can:
+
+1. **Understand Complex Questions**: Break down research queries into manageable parts
+2. **Search the Web Intelligently**: Find relevant academic papers and articles
+3. **Process Documents**: Extract and understand information from various sources
+4. **Generate Smart Answers**: Use AI to synthesize information with proper citations
+5. **Provide Web Interface**: Create a user-friendly way for others to use your system
+6. **Work with VS Code**: Function as a tool that GitHub Copilot agents can use
+
+### Real-World Applications
+- Academic research assistance
+- Fact-checking and verification
+- Content creation with citations
+- Educational project support
+- Professional research workflows
+
+---
+
+## 🗺️ Your Learning Journey
+
+We've organized everything into a progressive learning path that builds from simple concepts to professional-level skills:
+
+### 📚 **Level 1: Foundations** (Start Here!)
+- Understanding what the system does and why it's useful
+- Basic Python concepts and project setup
+- Your first "Hello, Research World!" program
+
+### 🔧 **Level 2: Core Components**  
+- Building individual system pieces (web search, document parsing, etc.)
+- Learning object-oriented programming through practical examples
+- Understanding how different parts work together
+
+### ⚙️ **Level 3: System Integration**
+- Connecting components into a working pipeline
+- Adding error handling and making the system robust
+- Creating tests to ensure everything works correctly
+
+### 🎨 **Level 4: User Interfaces**
+- Building a web interface for easy interaction
+- Creating APIs for other programs to use
+- Making the system accessible and user-friendly
+
+### 🚀 **Level 5: Advanced Features**
+- Performance optimization and scaling
+- Adding new capabilities and customizations
+- Contributing to open source projects
+
+---
+
+## 🛠️ Quick Start Guide
+
+### Prerequisites (Don't worry, we'll help you get set up!)
+- Basic computer skills (can navigate files and folders)
+- Curiosity about how things work
+- Willingness to experiment and learn from mistakes
+
+### Option 1: Try the Legacy Version Online
+Visit **[https://jdoner02.github.io/ai-deep-research-mcp/](https://jdoner02.github.io/ai-deep-research-mcp/)** to see what we're building toward!
+
+### Option 2: Install the Educational Version (Recommended!)
 ```bash
-# Clone the repository
+# 1. Clone this repository
 git clone https://github.com/jdoner02/ai-deep-research-mcp.git
 cd ai-deep-research-mcp
 
-# Install dependencies
+# 2. Start with our guided setup
+# Follow: learning_materials/getting_started/installation_guide.md
+
+# 3. Begin your first lesson
+python -m learning_materials.lessons.lesson_01_hello_research
+```
+
+### Option 3: Explore the Complete Legacy System
+```bash
+# See the full production system in the legacy/ directory
+cd legacy/
+
+# Install dependencies (advanced users)
 pip install -r requirements.txt
 
-# Run tests
+# Run comprehensive tests
 pytest
 
 # Start the web interface
@@ -72,7 +173,7 @@ Semantic Indexing → Retrieval → LLM Synthesis → Formatted Response
 
 ### arXiv Integration
 ```python
-from src.scholarly_sources import ArxivSearcher
+from src.infrastructure import ArxivSearcher
 
 searcher = ArxivSearcher()
 papers = searcher.search("machine learning", max_results=10)
@@ -80,7 +181,7 @@ papers = searcher.search("machine learning", max_results=10)
 
 ### Google Scholar Integration
 ```python
-from src.scholarly_sources import GoogleScholarSearcher
+from src.infrastructure import GoogleScholarSearcher
 
 searcher = GoogleScholarSearcher()
 papers = searcher.search("neural networks", max_results=5)
@@ -88,7 +189,7 @@ papers = searcher.search("neural networks", max_results=5)
 
 ### Semantic Scholar Integration
 ```python
-from src.scholarly_sources import SemanticScholarSearcher
+from src.infrastructure import SemanticScholarSearcher
 
 searcher = SemanticScholarSearcher()
 papers = searcher.search("deep learning", max_results=8)
@@ -96,7 +197,7 @@ papers = searcher.search("deep learning", max_results=8)
 
 ### Unified Search
 ```python
-from src.scholarly_sources import UnifiedScholarlySearcher
+from src.infrastructure import UnifiedScholarlySearcher
 
 searcher = UnifiedScholarlySearcher()
 papers = searcher.search("artificial intelligence", max_results=20)

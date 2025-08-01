@@ -1,0 +1,1290 @@
+<testsuites id="" name="" tests="91" failures="91" skipped="0" errors="0" time="8.86509">
+<testsuite name="research-workflow.spec.js" timestamp="2025-07-31T17:05:06.703Z" hostname="chromium" tests="13" failures="13" skipped="0" time="0.017" errors="0">
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: complete research workflow from query to results" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:20:5 e2e: complete research workflow from query to results" type="FAILURE">
+<![CDATA[  [chromium] › research-workflow.spec.js:20:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: complete research workflow from query to results 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/chromium_headless_shell-1181/chrome-mac/headless_shell
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: example query selection and execution" classname="research-workflow.spec.js" time="0.002">
+<failure message="research-workflow.spec.js:52:5 e2e: example query selection and execution" type="FAILURE">
+<![CDATA[  [chromium] › research-workflow.spec.js:52:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: example query selection and execution 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/chromium_headless_shell-1181/chrome-mac/headless_shell
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: real-time progress monitoring" classname="research-workflow.spec.js" time="0.002">
+<failure message="research-workflow.spec.js:72:5 e2e: real-time progress monitoring" type="FAILURE">
+<![CDATA[  [chromium] › research-workflow.spec.js:72:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: real-time progress monitoring 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/chromium_headless_shell-1181/chrome-mac/headless_shell
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: research configuration options work" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:94:5 e2e: research configuration options work" type="FAILURE">
+<![CDATA[  [chromium] › research-workflow.spec.js:94:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: research configuration options work 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/chromium_headless_shell-1181/chrome-mac/headless_shell
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: empty query validation" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:116:5 e2e: empty query validation" type="FAILURE">
+<![CDATA[  [chromium] › research-workflow.spec.js:116:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: empty query validation 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/chromium_headless_shell-1181/chrome-mac/headless_shell
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: network error handling" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:129:5 e2e: network error handling" type="FAILURE">
+<![CDATA[  [chromium] › research-workflow.spec.js:129:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: network error handling 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/chromium_headless_shell-1181/chrome-mac/headless_shell
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: research timeout handling" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:143:5 e2e: research timeout handling" type="FAILURE">
+<![CDATA[  [chromium] › research-workflow.spec.js:143:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: research timeout handling 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/chromium_headless_shell-1181/chrome-mac/headless_shell
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: responsive behavior on mobile" classname="research-workflow.spec.js" time="0.002">
+<failure message="research-workflow.spec.js:161:5 e2e: responsive behavior on mobile" type="FAILURE">
+<![CDATA[  [chromium] › research-workflow.spec.js:161:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: responsive behavior on mobile 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/chromium_headless_shell-1181/chrome-mac/headless_shell
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: keyboard navigation functionality" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:182:5 e2e: keyboard navigation functionality" type="FAILURE">
+<![CDATA[  [chromium] › research-workflow.spec.js:182:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: keyboard navigation functionality 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/chromium_headless_shell-1181/chrome-mac/headless_shell
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: research results display and interaction" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:199:5 e2e: research results display and interaction" type="FAILURE">
+<![CDATA[  [chromium] › research-workflow.spec.js:199:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: research results display and interaction 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/chromium_headless_shell-1181/chrome-mac/headless_shell
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Cross-Browser Tests › e2e: functionality works in all browsers" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:241:5 e2e: functionality works in all browsers" type="FAILURE">
+<![CDATA[  [chromium] › research-workflow.spec.js:241:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Cross-Browser Tests › e2e: functionality works in all browsers 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/chromium_headless_shell-1181/chrome-mac/headless_shell
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E File Operations Testing Suite › RED Phase: Failing File Operation Tests › e2e: research results can be downloaded" classname="research-workflow.spec.js" time="0.002">
+<failure message="research-workflow.spec.js:284:5 e2e: research results can be downloaded" type="FAILURE">
+<![CDATA[  [chromium] › research-workflow.spec.js:284:5 › E2E File Operations Testing Suite › RED Phase: Failing File Operation Tests › e2e: research results can be downloaded 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/chromium_headless_shell-1181/chrome-mac/headless_shell
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E File Operations Testing Suite › RED Phase: Failing File Operation Tests › e2e: progress log can be exported" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:318:5 e2e: progress log can be exported" type="FAILURE">
+<![CDATA[  [chromium] › research-workflow.spec.js:318:5 › E2E File Operations Testing Suite › RED Phase: Failing File Operation Tests › e2e: progress log can be exported 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/chromium_headless_shell-1181/chrome-mac/headless_shell
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+</testsuite>
+<testsuite name="research-workflow.spec.js" timestamp="2025-07-31T17:05:06.703Z" hostname="firefox" tests="13" failures="13" skipped="0" time="0.018" errors="0">
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: complete research workflow from query to results" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:20:5 e2e: complete research workflow from query to results" type="FAILURE">
+<![CDATA[  [firefox] › research-workflow.spec.js:20:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: complete research workflow from query to results 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/firefox-1489/firefox/Nightly.app/Contents/MacOS/firefox
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: example query selection and execution" classname="research-workflow.spec.js" time="0.002">
+<failure message="research-workflow.spec.js:52:5 e2e: example query selection and execution" type="FAILURE">
+<![CDATA[  [firefox] › research-workflow.spec.js:52:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: example query selection and execution 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/firefox-1489/firefox/Nightly.app/Contents/MacOS/firefox
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: real-time progress monitoring" classname="research-workflow.spec.js" time="0.002">
+<failure message="research-workflow.spec.js:72:5 e2e: real-time progress monitoring" type="FAILURE">
+<![CDATA[  [firefox] › research-workflow.spec.js:72:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: real-time progress monitoring 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/firefox-1489/firefox/Nightly.app/Contents/MacOS/firefox
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: research configuration options work" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:94:5 e2e: research configuration options work" type="FAILURE">
+<![CDATA[  [firefox] › research-workflow.spec.js:94:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: research configuration options work 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/firefox-1489/firefox/Nightly.app/Contents/MacOS/firefox
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: empty query validation" classname="research-workflow.spec.js" time="0.002">
+<failure message="research-workflow.spec.js:116:5 e2e: empty query validation" type="FAILURE">
+<![CDATA[  [firefox] › research-workflow.spec.js:116:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: empty query validation 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/firefox-1489/firefox/Nightly.app/Contents/MacOS/firefox
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: network error handling" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:129:5 e2e: network error handling" type="FAILURE">
+<![CDATA[  [firefox] › research-workflow.spec.js:129:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: network error handling 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/firefox-1489/firefox/Nightly.app/Contents/MacOS/firefox
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: research timeout handling" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:143:5 e2e: research timeout handling" type="FAILURE">
+<![CDATA[  [firefox] › research-workflow.spec.js:143:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: research timeout handling 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/firefox-1489/firefox/Nightly.app/Contents/MacOS/firefox
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: responsive behavior on mobile" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:161:5 e2e: responsive behavior on mobile" type="FAILURE">
+<![CDATA[  [firefox] › research-workflow.spec.js:161:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: responsive behavior on mobile 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/firefox-1489/firefox/Nightly.app/Contents/MacOS/firefox
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: keyboard navigation functionality" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:182:5 e2e: keyboard navigation functionality" type="FAILURE">
+<![CDATA[  [firefox] › research-workflow.spec.js:182:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: keyboard navigation functionality 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/firefox-1489/firefox/Nightly.app/Contents/MacOS/firefox
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: research results display and interaction" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:199:5 e2e: research results display and interaction" type="FAILURE">
+<![CDATA[  [firefox] › research-workflow.spec.js:199:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: research results display and interaction 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/firefox-1489/firefox/Nightly.app/Contents/MacOS/firefox
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Cross-Browser Tests › e2e: functionality works in all browsers" classname="research-workflow.spec.js" time="0.002">
+<failure message="research-workflow.spec.js:241:5 e2e: functionality works in all browsers" type="FAILURE">
+<![CDATA[  [firefox] › research-workflow.spec.js:241:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Cross-Browser Tests › e2e: functionality works in all browsers 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/firefox-1489/firefox/Nightly.app/Contents/MacOS/firefox
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E File Operations Testing Suite › RED Phase: Failing File Operation Tests › e2e: research results can be downloaded" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:284:5 e2e: research results can be downloaded" type="FAILURE">
+<![CDATA[  [firefox] › research-workflow.spec.js:284:5 › E2E File Operations Testing Suite › RED Phase: Failing File Operation Tests › e2e: research results can be downloaded 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/firefox-1489/firefox/Nightly.app/Contents/MacOS/firefox
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E File Operations Testing Suite › RED Phase: Failing File Operation Tests › e2e: progress log can be exported" classname="research-workflow.spec.js" time="0.002">
+<failure message="research-workflow.spec.js:318:5 e2e: progress log can be exported" type="FAILURE">
+<![CDATA[  [firefox] › research-workflow.spec.js:318:5 › E2E File Operations Testing Suite › RED Phase: Failing File Operation Tests › e2e: progress log can be exported 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/firefox-1489/firefox/Nightly.app/Contents/MacOS/firefox
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+</testsuite>
+<testsuite name="research-workflow.spec.js" timestamp="2025-07-31T17:05:06.703Z" hostname="webkit" tests="13" failures="13" skipped="0" time="0.022" errors="0">
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: complete research workflow from query to results" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:20:5 e2e: complete research workflow from query to results" type="FAILURE">
+<![CDATA[  [webkit] › research-workflow.spec.js:20:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: complete research workflow from query to results 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/webkit-2191/pw_run.sh
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: example query selection and execution" classname="research-workflow.spec.js" time="0.002">
+<failure message="research-workflow.spec.js:52:5 e2e: example query selection and execution" type="FAILURE">
+<![CDATA[  [webkit] › research-workflow.spec.js:52:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: example query selection and execution 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/webkit-2191/pw_run.sh
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: real-time progress monitoring" classname="research-workflow.spec.js" time="0.002">
+<failure message="research-workflow.spec.js:72:5 e2e: real-time progress monitoring" type="FAILURE">
+<![CDATA[  [webkit] › research-workflow.spec.js:72:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: real-time progress monitoring 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/webkit-2191/pw_run.sh
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: research configuration options work" classname="research-workflow.spec.js" time="0.003">
+<failure message="research-workflow.spec.js:94:5 e2e: research configuration options work" type="FAILURE">
+<![CDATA[  [webkit] › research-workflow.spec.js:94:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: research configuration options work 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/webkit-2191/pw_run.sh
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: empty query validation" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:116:5 e2e: empty query validation" type="FAILURE">
+<![CDATA[  [webkit] › research-workflow.spec.js:116:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: empty query validation 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/webkit-2191/pw_run.sh
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: network error handling" classname="research-workflow.spec.js" time="0.002">
+<failure message="research-workflow.spec.js:129:5 e2e: network error handling" type="FAILURE">
+<![CDATA[  [webkit] › research-workflow.spec.js:129:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: network error handling 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/webkit-2191/pw_run.sh
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: research timeout handling" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:143:5 e2e: research timeout handling" type="FAILURE">
+<![CDATA[  [webkit] › research-workflow.spec.js:143:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: research timeout handling 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/webkit-2191/pw_run.sh
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: responsive behavior on mobile" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:161:5 e2e: responsive behavior on mobile" type="FAILURE">
+<![CDATA[  [webkit] › research-workflow.spec.js:161:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: responsive behavior on mobile 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/webkit-2191/pw_run.sh
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: keyboard navigation functionality" classname="research-workflow.spec.js" time="0.003">
+<failure message="research-workflow.spec.js:182:5 e2e: keyboard navigation functionality" type="FAILURE">
+<![CDATA[  [webkit] › research-workflow.spec.js:182:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: keyboard navigation functionality 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/webkit-2191/pw_run.sh
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: research results display and interaction" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:199:5 e2e: research results display and interaction" type="FAILURE">
+<![CDATA[  [webkit] › research-workflow.spec.js:199:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: research results display and interaction 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/webkit-2191/pw_run.sh
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Cross-Browser Tests › e2e: functionality works in all browsers" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:241:5 e2e: functionality works in all browsers" type="FAILURE">
+<![CDATA[  [webkit] › research-workflow.spec.js:241:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Cross-Browser Tests › e2e: functionality works in all browsers 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/webkit-2191/pw_run.sh
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E File Operations Testing Suite › RED Phase: Failing File Operation Tests › e2e: research results can be downloaded" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:284:5 e2e: research results can be downloaded" type="FAILURE">
+<![CDATA[  [webkit] › research-workflow.spec.js:284:5 › E2E File Operations Testing Suite › RED Phase: Failing File Operation Tests › e2e: research results can be downloaded 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/webkit-2191/pw_run.sh
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E File Operations Testing Suite › RED Phase: Failing File Operation Tests › e2e: progress log can be exported" classname="research-workflow.spec.js" time="0.003">
+<failure message="research-workflow.spec.js:318:5 e2e: progress log can be exported" type="FAILURE">
+<![CDATA[  [webkit] › research-workflow.spec.js:318:5 › E2E File Operations Testing Suite › RED Phase: Failing File Operation Tests › e2e: progress log can be exported 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/webkit-2191/pw_run.sh
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+</testsuite>
+<testsuite name="research-workflow.spec.js" timestamp="2025-07-31T17:05:06.703Z" hostname="Mobile Chrome" tests="13" failures="13" skipped="0" time="0.018" errors="0">
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: complete research workflow from query to results" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:20:5 e2e: complete research workflow from query to results" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › research-workflow.spec.js:20:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: complete research workflow from query to results 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/chromium_headless_shell-1181/chrome-mac/headless_shell
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: example query selection and execution" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:52:5 e2e: example query selection and execution" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › research-workflow.spec.js:52:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: example query selection and execution 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/chromium_headless_shell-1181/chrome-mac/headless_shell
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: real-time progress monitoring" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:72:5 e2e: real-time progress monitoring" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › research-workflow.spec.js:72:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: real-time progress monitoring 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/chromium_headless_shell-1181/chrome-mac/headless_shell
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: research configuration options work" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:94:5 e2e: research configuration options work" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › research-workflow.spec.js:94:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: research configuration options work 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/chromium_headless_shell-1181/chrome-mac/headless_shell
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: empty query validation" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:116:5 e2e: empty query validation" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › research-workflow.spec.js:116:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: empty query validation 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/chromium_headless_shell-1181/chrome-mac/headless_shell
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: network error handling" classname="research-workflow.spec.js" time="0.003">
+<failure message="research-workflow.spec.js:129:5 e2e: network error handling" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › research-workflow.spec.js:129:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: network error handling 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/chromium_headless_shell-1181/chrome-mac/headless_shell
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: research timeout handling" classname="research-workflow.spec.js" time="0.002">
+<failure message="research-workflow.spec.js:143:5 e2e: research timeout handling" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › research-workflow.spec.js:143:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: research timeout handling 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/chromium_headless_shell-1181/chrome-mac/headless_shell
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: responsive behavior on mobile" classname="research-workflow.spec.js" time="0.002">
+<failure message="research-workflow.spec.js:161:5 e2e: responsive behavior on mobile" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › research-workflow.spec.js:161:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: responsive behavior on mobile 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/chromium_headless_shell-1181/chrome-mac/headless_shell
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: keyboard navigation functionality" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:182:5 e2e: keyboard navigation functionality" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › research-workflow.spec.js:182:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: keyboard navigation functionality 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/chromium_headless_shell-1181/chrome-mac/headless_shell
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: research results display and interaction" classname="research-workflow.spec.js" time="0.002">
+<failure message="research-workflow.spec.js:199:5 e2e: research results display and interaction" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › research-workflow.spec.js:199:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: research results display and interaction 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/chromium_headless_shell-1181/chrome-mac/headless_shell
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Cross-Browser Tests › e2e: functionality works in all browsers" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:241:5 e2e: functionality works in all browsers" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › research-workflow.spec.js:241:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Cross-Browser Tests › e2e: functionality works in all browsers 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/chromium_headless_shell-1181/chrome-mac/headless_shell
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E File Operations Testing Suite › RED Phase: Failing File Operation Tests › e2e: research results can be downloaded" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:284:5 e2e: research results can be downloaded" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › research-workflow.spec.js:284:5 › E2E File Operations Testing Suite › RED Phase: Failing File Operation Tests › e2e: research results can be downloaded 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/chromium_headless_shell-1181/chrome-mac/headless_shell
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E File Operations Testing Suite › RED Phase: Failing File Operation Tests › e2e: progress log can be exported" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:318:5 e2e: progress log can be exported" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › research-workflow.spec.js:318:5 › E2E File Operations Testing Suite › RED Phase: Failing File Operation Tests › e2e: progress log can be exported 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/chromium_headless_shell-1181/chrome-mac/headless_shell
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+</testsuite>
+<testsuite name="research-workflow.spec.js" timestamp="2025-07-31T17:05:06.703Z" hostname="Mobile Safari" tests="13" failures="13" skipped="0" time="0.015" errors="0">
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: complete research workflow from query to results" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:20:5 e2e: complete research workflow from query to results" type="FAILURE">
+<![CDATA[  [Mobile Safari] › research-workflow.spec.js:20:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: complete research workflow from query to results 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/webkit-2191/pw_run.sh
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: example query selection and execution" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:52:5 e2e: example query selection and execution" type="FAILURE">
+<![CDATA[  [Mobile Safari] › research-workflow.spec.js:52:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: example query selection and execution 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/webkit-2191/pw_run.sh
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: real-time progress monitoring" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:72:5 e2e: real-time progress monitoring" type="FAILURE">
+<![CDATA[  [Mobile Safari] › research-workflow.spec.js:72:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: real-time progress monitoring 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/webkit-2191/pw_run.sh
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: research configuration options work" classname="research-workflow.spec.js" time="0.002">
+<failure message="research-workflow.spec.js:94:5 e2e: research configuration options work" type="FAILURE">
+<![CDATA[  [Mobile Safari] › research-workflow.spec.js:94:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: research configuration options work 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/webkit-2191/pw_run.sh
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: empty query validation" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:116:5 e2e: empty query validation" type="FAILURE">
+<![CDATA[  [Mobile Safari] › research-workflow.spec.js:116:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: empty query validation 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/webkit-2191/pw_run.sh
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: network error handling" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:129:5 e2e: network error handling" type="FAILURE">
+<![CDATA[  [Mobile Safari] › research-workflow.spec.js:129:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: network error handling 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/webkit-2191/pw_run.sh
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: research timeout handling" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:143:5 e2e: research timeout handling" type="FAILURE">
+<![CDATA[  [Mobile Safari] › research-workflow.spec.js:143:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: research timeout handling 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/webkit-2191/pw_run.sh
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: responsive behavior on mobile" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:161:5 e2e: responsive behavior on mobile" type="FAILURE">
+<![CDATA[  [Mobile Safari] › research-workflow.spec.js:161:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: responsive behavior on mobile 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/webkit-2191/pw_run.sh
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: keyboard navigation functionality" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:182:5 e2e: keyboard navigation functionality" type="FAILURE">
+<![CDATA[  [Mobile Safari] › research-workflow.spec.js:182:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: keyboard navigation functionality 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/webkit-2191/pw_run.sh
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: research results display and interaction" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:199:5 e2e: research results display and interaction" type="FAILURE">
+<![CDATA[  [Mobile Safari] › research-workflow.spec.js:199:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: research results display and interaction 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/webkit-2191/pw_run.sh
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Cross-Browser Tests › e2e: functionality works in all browsers" classname="research-workflow.spec.js" time="0.002">
+<failure message="research-workflow.spec.js:241:5 e2e: functionality works in all browsers" type="FAILURE">
+<![CDATA[  [Mobile Safari] › research-workflow.spec.js:241:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Cross-Browser Tests › e2e: functionality works in all browsers 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/webkit-2191/pw_run.sh
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E File Operations Testing Suite › RED Phase: Failing File Operation Tests › e2e: research results can be downloaded" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:284:5 e2e: research results can be downloaded" type="FAILURE">
+<![CDATA[  [Mobile Safari] › research-workflow.spec.js:284:5 › E2E File Operations Testing Suite › RED Phase: Failing File Operation Tests › e2e: research results can be downloaded 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/webkit-2191/pw_run.sh
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+<testcase name="E2E File Operations Testing Suite › RED Phase: Failing File Operation Tests › e2e: progress log can be exported" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:318:5 e2e: progress log can be exported" type="FAILURE">
+<![CDATA[  [Mobile Safari] › research-workflow.spec.js:318:5 › E2E File Operations Testing Suite › RED Phase: Failing File Operation Tests › e2e: progress log can be exported 
+
+    Error: browserType.launch: Executable doesn't exist at /Users/jessicadoner/Library/Caches/ms-playwright/webkit-2191/pw_run.sh
+    ╔═════════════════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright Test or Playwright was just installed or updated. ║
+    ║ Please run the following command to download new browsers:              ║
+    ║                                                                         ║
+    ║     npx playwright install                                              ║
+    ║                                                                         ║
+    ║ <3 Playwright Team                                                      ║
+    ╚═════════════════════════════════════════════════════════════════════════╝
+]]>
+</failure>
+</testcase>
+</testsuite>
+<testsuite name="research-workflow.spec.js" timestamp="2025-07-31T17:05:06.703Z" hostname="Microsoft Edge" tests="13" failures="13" skipped="0" time="0.016" errors="0">
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: complete research workflow from query to results" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:20:5 e2e: complete research workflow from query to results" type="FAILURE">
+<![CDATA[  [Microsoft Edge] › research-workflow.spec.js:20:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: complete research workflow from query to results 
+
+    Error: browserType.launch: Chromium distribution 'msedge' is not found at /Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge
+    Run "npx playwright install msedge"
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: example query selection and execution" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:52:5 e2e: example query selection and execution" type="FAILURE">
+<![CDATA[  [Microsoft Edge] › research-workflow.spec.js:52:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: example query selection and execution 
+
+    Error: browserType.launch: Chromium distribution 'msedge' is not found at /Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge
+    Run "npx playwright install msedge"
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: real-time progress monitoring" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:72:5 e2e: real-time progress monitoring" type="FAILURE">
+<![CDATA[  [Microsoft Edge] › research-workflow.spec.js:72:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: real-time progress monitoring 
+
+    Error: browserType.launch: Chromium distribution 'msedge' is not found at /Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge
+    Run "npx playwright install msedge"
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: research configuration options work" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:94:5 e2e: research configuration options work" type="FAILURE">
+<![CDATA[  [Microsoft Edge] › research-workflow.spec.js:94:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: research configuration options work 
+
+    Error: browserType.launch: Chromium distribution 'msedge' is not found at /Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge
+    Run "npx playwright install msedge"
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: empty query validation" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:116:5 e2e: empty query validation" type="FAILURE">
+<![CDATA[  [Microsoft Edge] › research-workflow.spec.js:116:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: empty query validation 
+
+    Error: browserType.launch: Chromium distribution 'msedge' is not found at /Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge
+    Run "npx playwright install msedge"
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: network error handling" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:129:5 e2e: network error handling" type="FAILURE">
+<![CDATA[  [Microsoft Edge] › research-workflow.spec.js:129:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: network error handling 
+
+    Error: browserType.launch: Chromium distribution 'msedge' is not found at /Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge
+    Run "npx playwright install msedge"
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: research timeout handling" classname="research-workflow.spec.js" time="0.002">
+<failure message="research-workflow.spec.js:143:5 e2e: research timeout handling" type="FAILURE">
+<![CDATA[  [Microsoft Edge] › research-workflow.spec.js:143:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: research timeout handling 
+
+    Error: browserType.launch: Chromium distribution 'msedge' is not found at /Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge
+    Run "npx playwright install msedge"
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: responsive behavior on mobile" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:161:5 e2e: responsive behavior on mobile" type="FAILURE">
+<![CDATA[  [Microsoft Edge] › research-workflow.spec.js:161:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: responsive behavior on mobile 
+
+    Error: browserType.launch: Chromium distribution 'msedge' is not found at /Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge
+    Run "npx playwright install msedge"
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: keyboard navigation functionality" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:182:5 e2e: keyboard navigation functionality" type="FAILURE">
+<![CDATA[  [Microsoft Edge] › research-workflow.spec.js:182:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: keyboard navigation functionality 
+
+    Error: browserType.launch: Chromium distribution 'msedge' is not found at /Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge
+    Run "npx playwright install msedge"
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: research results display and interaction" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:199:5 e2e: research results display and interaction" type="FAILURE">
+<![CDATA[  [Microsoft Edge] › research-workflow.spec.js:199:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: research results display and interaction 
+
+    Error: browserType.launch: Chromium distribution 'msedge' is not found at /Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge
+    Run "npx playwright install msedge"
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Cross-Browser Tests › e2e: functionality works in all browsers" classname="research-workflow.spec.js" time="0.002">
+<failure message="research-workflow.spec.js:241:5 e2e: functionality works in all browsers" type="FAILURE">
+<![CDATA[  [Microsoft Edge] › research-workflow.spec.js:241:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Cross-Browser Tests › e2e: functionality works in all browsers 
+
+    Error: browserType.launch: Chromium distribution 'msedge' is not found at /Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge
+    Run "npx playwright install msedge"
+]]>
+</failure>
+</testcase>
+<testcase name="E2E File Operations Testing Suite › RED Phase: Failing File Operation Tests › e2e: research results can be downloaded" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:284:5 e2e: research results can be downloaded" type="FAILURE">
+<![CDATA[  [Microsoft Edge] › research-workflow.spec.js:284:5 › E2E File Operations Testing Suite › RED Phase: Failing File Operation Tests › e2e: research results can be downloaded 
+
+    Error: browserType.launch: Chromium distribution 'msedge' is not found at /Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge
+    Run "npx playwright install msedge"
+]]>
+</failure>
+</testcase>
+<testcase name="E2E File Operations Testing Suite › RED Phase: Failing File Operation Tests › e2e: progress log can be exported" classname="research-workflow.spec.js" time="0.002">
+<failure message="research-workflow.spec.js:318:5 e2e: progress log can be exported" type="FAILURE">
+<![CDATA[  [Microsoft Edge] › research-workflow.spec.js:318:5 › E2E File Operations Testing Suite › RED Phase: Failing File Operation Tests › e2e: progress log can be exported 
+
+    Error: browserType.launch: Chromium distribution 'msedge' is not found at /Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge
+    Run "npx playwright install msedge"
+]]>
+</failure>
+</testcase>
+</testsuite>
+<testsuite name="research-workflow.spec.js" timestamp="2025-07-31T17:05:06.703Z" hostname="Google Chrome" tests="13" failures="13" skipped="0" time="0.015" errors="0">
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: complete research workflow from query to results" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:20:5 e2e: complete research workflow from query to results" type="FAILURE">
+<![CDATA[  [Google Chrome] › research-workflow.spec.js:20:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: complete research workflow from query to results 
+
+    Error: browserType.launch: Chromium distribution 'chrome' is not found at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+    Run "npx playwright install chrome"
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: example query selection and execution" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:52:5 e2e: example query selection and execution" type="FAILURE">
+<![CDATA[  [Google Chrome] › research-workflow.spec.js:52:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: example query selection and execution 
+
+    Error: browserType.launch: Chromium distribution 'chrome' is not found at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+    Run "npx playwright install chrome"
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: real-time progress monitoring" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:72:5 e2e: real-time progress monitoring" type="FAILURE">
+<![CDATA[  [Google Chrome] › research-workflow.spec.js:72:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: real-time progress monitoring 
+
+    Error: browserType.launch: Chromium distribution 'chrome' is not found at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+    Run "npx playwright install chrome"
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: research configuration options work" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:94:5 e2e: research configuration options work" type="FAILURE">
+<![CDATA[  [Google Chrome] › research-workflow.spec.js:94:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Research Workflow Tests › e2e: research configuration options work 
+
+    Error: browserType.launch: Chromium distribution 'chrome' is not found at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+    Run "npx playwright install chrome"
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: empty query validation" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:116:5 e2e: empty query validation" type="FAILURE">
+<![CDATA[  [Google Chrome] › research-workflow.spec.js:116:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: empty query validation 
+
+    Error: browserType.launch: Chromium distribution 'chrome' is not found at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+    Run "npx playwright install chrome"
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: network error handling" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:129:5 e2e: network error handling" type="FAILURE">
+<![CDATA[  [Google Chrome] › research-workflow.spec.js:129:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: network error handling 
+
+    Error: browserType.launch: Chromium distribution 'chrome' is not found at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+    Run "npx playwright install chrome"
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: research timeout handling" classname="research-workflow.spec.js" time="0.002">
+<failure message="research-workflow.spec.js:143:5 e2e: research timeout handling" type="FAILURE">
+<![CDATA[  [Google Chrome] › research-workflow.spec.js:143:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Error Handling Tests › e2e: research timeout handling 
+
+    Error: browserType.launch: Chromium distribution 'chrome' is not found at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+    Run "npx playwright install chrome"
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: responsive behavior on mobile" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:161:5 e2e: responsive behavior on mobile" type="FAILURE">
+<![CDATA[  [Google Chrome] › research-workflow.spec.js:161:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: responsive behavior on mobile 
+
+    Error: browserType.launch: Chromium distribution 'chrome' is not found at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+    Run "npx playwright install chrome"
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: keyboard navigation functionality" classname="research-workflow.spec.js" time="0.002">
+<failure message="research-workflow.spec.js:182:5 e2e: keyboard navigation functionality" type="FAILURE">
+<![CDATA[  [Google Chrome] › research-workflow.spec.js:182:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: keyboard navigation functionality 
+
+    Error: browserType.launch: Chromium distribution 'chrome' is not found at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+    Run "npx playwright install chrome"
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: research results display and interaction" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:199:5 e2e: research results display and interaction" type="FAILURE">
+<![CDATA[  [Google Chrome] › research-workflow.spec.js:199:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing UI Interaction Tests › e2e: research results display and interaction 
+
+    Error: browserType.launch: Chromium distribution 'chrome' is not found at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+    Run "npx playwright install chrome"
+]]>
+</failure>
+</testcase>
+<testcase name="E2E Testing Suite - Complete User Workflows › RED Phase: Failing Cross-Browser Tests › e2e: functionality works in all browsers" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:241:5 e2e: functionality works in all browsers" type="FAILURE">
+<![CDATA[  [Google Chrome] › research-workflow.spec.js:241:5 › E2E Testing Suite - Complete User Workflows › RED Phase: Failing Cross-Browser Tests › e2e: functionality works in all browsers 
+
+    Error: browserType.launch: Chromium distribution 'chrome' is not found at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+    Run "npx playwright install chrome"
+]]>
+</failure>
+</testcase>
+<testcase name="E2E File Operations Testing Suite › RED Phase: Failing File Operation Tests › e2e: research results can be downloaded" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:284:5 e2e: research results can be downloaded" type="FAILURE">
+<![CDATA[  [Google Chrome] › research-workflow.spec.js:284:5 › E2E File Operations Testing Suite › RED Phase: Failing File Operation Tests › e2e: research results can be downloaded 
+
+    Error: browserType.launch: Chromium distribution 'chrome' is not found at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+    Run "npx playwright install chrome"
+]]>
+</failure>
+</testcase>
+<testcase name="E2E File Operations Testing Suite › RED Phase: Failing File Operation Tests › e2e: progress log can be exported" classname="research-workflow.spec.js" time="0.001">
+<failure message="research-workflow.spec.js:318:5 e2e: progress log can be exported" type="FAILURE">
+<![CDATA[  [Google Chrome] › research-workflow.spec.js:318:5 › E2E File Operations Testing Suite › RED Phase: Failing File Operation Tests › e2e: progress log can be exported 
+
+    Error: browserType.launch: Chromium distribution 'chrome' is not found at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+    Run "npx playwright install chrome"
+]]>
+</failure>
+</testcase>
+</testsuite>
+</testsuites>
