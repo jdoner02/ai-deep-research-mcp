@@ -7,21 +7,20 @@ and depend only on domain interfaces.
 """
 
 import asyncio
-from dataclasses import dataclass, field
-from typing import List, Optional
-from datetime import datetime
 import uuid
+from dataclasses import dataclass, field
+from datetime import datetime
+from typing import List, Optional
 
 from ..domain.entities import (
-    ResearchQuery,
-    ResearchResult,
-    QueryId,
-    ResearchQueryRepository,
-    ResearchResultRepository,
-    InvalidQueryException,
     DomainException,
+    InvalidQueryException,
+    QueryId,
+    ResearchQuery,
+    ResearchQueryRepository,
+    ResearchResult,
+    ResearchResultRepository,
 )
-
 
 # Use Case DTOs
 

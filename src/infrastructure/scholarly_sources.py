@@ -26,16 +26,17 @@ This module provides infrastructure layer implementations for accessing external
 academic databases following Domain-Driven Design principles.
 """
 
-import requests
-import time
+import json
 import logging
-from typing import List, Dict, Optional, Any
+import time
 from dataclasses import dataclass
 from datetime import datetime
-import xml.etree.ElementTree as ET
+from typing import Any, Dict, List, Optional
 from urllib.parse import quote_plus
+
+import defusedxml.ElementTree as ET
 import feedparser
-import json
+import requests
 
 logger = logging.getLogger(__name__)
 

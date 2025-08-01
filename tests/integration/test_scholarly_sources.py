@@ -34,15 +34,17 @@ This module tests the integration of academic database searching capabilities
 including arXiv, Semantic Scholar, and unified search functionality.
 """
 
-import pytest
 from unittest.mock import Mock, patch
+
+import pytest
+
 from src.infrastructure.scholarly_sources import (
     ArxivSearcher,
-    SemanticScholarSearcher,
     GoogleScholarSearcher,
-    UnifiedScholarlySearcher,
     PaperProcessor,
     ScholarlyPaper,
+    SemanticScholarSearcher,
+    UnifiedScholarlySearcher,
 )
 
 

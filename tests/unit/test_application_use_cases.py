@@ -30,35 +30,34 @@ This is where the "business rules" live - the step-by-step processes that
 define how our AI research system actually works!
 """
 
-import pytest
 import uuid
 from datetime import datetime
-from unittest.mock import Mock, AsyncMock
 from typing import List
+from unittest.mock import AsyncMock, Mock
 
-from unittest.mock import Mock, AsyncMock
+import pytest
 
 from src.application.use_cases import (
-    CreateResearchQueryUseCase,
-    ExecuteResearchUseCase,
-    ResearchOrchestrationService,
     CreateResearchQueryRequest,
     CreateResearchQueryResponse,
+    CreateResearchQueryUseCase,
     ExecuteResearchRequest,
     ExecuteResearchResponse,
+    ExecuteResearchUseCase,
     OrchestrationResponse,
+    ResearchOrchestrationService,
 )
 from src.domain.entities import (
-    ResearchQuery,
-    ResearchResult,
-    QueryId,
-    ResearchQueryType,
-    ResearchSource,
-    SourceType,
-    ResearchStatus,
-    QueryNotFoundError,
-    InvalidQueryException,
     DomainException,
+    InvalidQueryException,
+    QueryId,
+    QueryNotFoundError,
+    ResearchQuery,
+    ResearchQueryType,
+    ResearchResult,
+    ResearchSource,
+    ResearchStatus,
+    SourceType,
 )
 
 

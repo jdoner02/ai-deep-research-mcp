@@ -31,24 +31,24 @@ This would integrate with frameworks like FastAPI, Flask, or similar.
 Enhanced with scholarly sources integration for academic research capabilities.
 """
 
-from typing import Dict, Any, List, Optional
-from dataclasses import asdict
 import json
 import logging
 import uuid
+from dataclasses import asdict
 from datetime import datetime
+from typing import Any, Dict, List, Optional
 
-from ..application.use_cases import (
-    CreateResearchQueryUseCase,
-    ExecuteResearchUseCase,
-    ResearchOrchestrationService,
-    CreateResearchQueryRequest,
-    ExecuteResearchRequest,
-)
 from ..application.scholarly_use_cases import (
+    EnhancedResearchOrchestrationService,
     ScholarlyResearchUseCase,
     ScholarlySearchRequest,
-    EnhancedResearchOrchestrationService,
+)
+from ..application.use_cases import (
+    CreateResearchQueryRequest,
+    CreateResearchQueryUseCase,
+    ExecuteResearchRequest,
+    ExecuteResearchUseCase,
+    ResearchOrchestrationService,
 )
 from ..infrastructure.repositories import (
     InMemoryResearchQueryRepository,

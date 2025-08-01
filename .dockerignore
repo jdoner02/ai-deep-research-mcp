@@ -1,0 +1,87 @@
+# Docker ignore file for AI Deep Research MCP
+# Optimize Docker build by excluding unnecessary files
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Development
+_ai_development/
+.pytest_cache/
+*.log
+logs/
+*.tmp
+
+# Documentation (built versions)
+docs/_build/
+docs/site/
+
+# Node.js (if any)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Security reports (contain sensitive info)
+security_report.json
+safety_report.json
+
+# Local development
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Backup files
+*.bak
+*.backup
+*.orig
+
+# Large data files
+data/
+*.db
+*.sqlite
+*.sqlite3
+
+# Deployment artifacts
+deployment/
+*.tar.gz
+*.zip

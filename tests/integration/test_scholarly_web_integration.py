@@ -11,12 +11,13 @@ This test validates that the full scholarly research pipeline works:
 This is a real integration test that makes actual API calls.
 """
 
-import pytest
 import asyncio
-from unittest.mock import patch, Mock
+from unittest.mock import Mock, patch
 
-from src.presentation.web_interface import WebInterfaceHandler, WebUIComponents
+import pytest
+
 from src.application.scholarly_use_cases import ScholarlyResearchUseCase
+from src.presentation.web_interface import WebInterfaceHandler, WebUIComponents
 
 
 class TestScholarlyWebInterfaceIntegration:

@@ -29,21 +29,22 @@ databases, web interfaces, or external services.
 - Practice the Arrange-Act-Assert pattern
 """
 
-import pytest
 from datetime import datetime
 from uuid import UUID
 
+import pytest
+
 from src.domain.entities import (
+    DomainException,
+    InvalidQueryException,
+    QueryId,
+    QueryNotFoundError,
     ResearchQuery,
+    ResearchQueryType,
     ResearchResult,
     ResearchSource,
-    QueryId,
-    ResearchQueryType,
-    SourceType,
     ResearchStatus,
-    DomainException,
-    QueryNotFoundError,
-    InvalidQueryException,
+    SourceType,
 )
 
 

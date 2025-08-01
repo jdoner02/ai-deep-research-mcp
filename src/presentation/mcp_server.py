@@ -7,15 +7,15 @@ Adapts between MCP protocol and our Clean Architecture application layer.
 
 import json
 import logging
-from typing import Dict, Any, List, Optional, Sequence
 from dataclasses import asdict
+from typing import Any, Dict, List, Optional, Sequence
 
 from ..application.use_cases import (
+    CreateResearchQueryRequest,
     CreateResearchQueryUseCase,
+    ExecuteResearchRequest,
     ExecuteResearchUseCase,
     ResearchOrchestrationService,
-    CreateResearchQueryRequest,
-    ExecuteResearchRequest,
 )
 from ..domain.entities import ResearchQuery, ResearchResult
 from ..infrastructure.repositories import (
@@ -34,11 +34,15 @@ class McpServerHandler:
     messages into our Clean Architecture use cases.
     """
 
-    def __init__(self):
+    def __init__(
+        self,
+        query_repository: Optional["InMemoryResearchQueryRepository"] = None,
+        result_repository: Optional["InMemoryResearchResultRepository"] = None,
+    ):
         """Initialize the MCP server with dependency injection."""
         # Infrastructure dependencies
-        self.query_repository = InMemoryResearchQueryRepository()
-        self.result_repository = InMemoryResearchResultRepository()
+        self.query_repository = query_repository or InMemoryResearchQueryRepository()
+        self.result_repository = result_repository or InMemoryResearchResultRepository()
 
         # Application use cases
         self.create_query_use_case = CreateResearchQueryUseCase(
@@ -245,11 +249,20 @@ class McpServerHandler:
 
 
 # MCP Server Factory Function
-def create_mcp_server() -> McpServerHandler:
+def create_mcp_server(
+    query_repository: Optional["InMemoryResearchQueryRepository"] = None,
+    result_repository: Optional["InMemoryResearchResultRepository"] = None,
+) -> McpServerHandler:
     """
     Factory function to create and configure the MCP server.
 
     This function sets up all dependencies and returns a ready-to-use
     MCP server handler.
+
+    Args:
+        query_repository: Optional shared query repository instance
+        result_repository: Optional shared result repository instance
     """
-    return McpServerHandler()
+    return McpServerHandler(
+        query_repository=query_repository, result_repository=result_repository
+    )

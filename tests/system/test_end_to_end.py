@@ -5,13 +5,14 @@ Tests the complete system integration from presentation layer
 through to infrastructure, verifying end-to-end functionality.
 """
 
-import pytest
 import json
 from unittest.mock import patch
 
+import pytest
+
 from src import create_app
-from src.presentation.mcp_server import create_mcp_server
 from src.presentation.cli import ResearchCLI
+from src.presentation.mcp_server import create_mcp_server
 from src.presentation.web_interface import create_web_interface
 
 

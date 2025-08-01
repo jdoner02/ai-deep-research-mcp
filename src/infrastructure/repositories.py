@@ -5,14 +5,14 @@ These provide simple in-memory storage for development and testing.
 In production, these would be replaced with database implementations.
 """
 
-from typing import List, Optional, Dict
 from threading import Lock
+from typing import Dict, List, Optional
 
 from ..domain.entities import (
+    QueryId,
     ResearchQuery,
     ResearchResult,
     ResearchStatus,
-    QueryId,
 )
 
 

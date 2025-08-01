@@ -9,8 +9,8 @@ conftest.py is pytest's "shared testing setup" file - like having
 a toolbox that all your test rooms can share!
 """
 
-import sys
 import os
+import sys
 from pathlib import Path
 
 # Add the project root to Python path so imports work correctly
@@ -18,17 +18,25 @@ from pathlib import Path
 project_root = Path(__file__).parent.parent
 sys.path.insert(0, str(project_root))
 
-# Also add the src directory explicitly
+# Also add the src directory explicitly for clean imports
 src_path = project_root / "src"
 if src_path.exists():
     sys.path.insert(0, str(src_path))
 
+# Ensure we're not accidentally importing from legacy backup
+legacy_path = project_root / "_ai_development" / "legacy_reference"
+if str(legacy_path) in sys.path:
+    sys.path.remove(str(legacy_path))
+
 print(f"✅ Test setup complete - Python can now find our code!")
 print(f"   Project root: {project_root}")
 print(f"   Source path: {src_path}")
+print(f"   Python path: {sys.path[:3]}...")  # Show first 3 entries
+
+# Shared test fixtures will go here
+from unittest.mock import AsyncMock, Mock
 
 import pytest
-from unittest.mock import Mock, AsyncMock
 
 # Global test fixtures that all tests can use
 # Think of these as "test helpers" available everywhere!

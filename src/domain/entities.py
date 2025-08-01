@@ -22,11 +22,12 @@ consistency rules (making sure everything makes sense together).
 """
 
 from __future__ import annotations
+
 from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
 from datetime import datetime
 from enum import Enum
-from typing import List, Dict, Optional, Any, Protocol
+from typing import Any, Dict, List, Optional, Protocol
 from uuid import UUID, uuid4
 
 

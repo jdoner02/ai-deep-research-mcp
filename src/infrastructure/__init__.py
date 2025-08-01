@@ -12,11 +12,11 @@ from .repositories import (
 )
 from .scholarly_sources import (
     ArxivSearcher,
-    SemanticScholarSearcher,
     GoogleScholarSearcher,
-    UnifiedScholarlySearcher,
     PaperProcessor,
     ScholarlyPaper,
+    SemanticScholarSearcher,
+    UnifiedScholarlySearcher,
 )
 
 __all__ = [

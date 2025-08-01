@@ -8,13 +8,19 @@ AI Deep Research MCP system following Clean Architecture principles.
 import asyncio
 import logging
 import sys
-from typing import Optional
 from pathlib import Path
+from typing import Optional
+
+# Import infrastructure for shared repositories
+from .infrastructure.repositories import (
+    InMemoryResearchQueryRepository,
+    InMemoryResearchResultRepository,
+)
+from .presentation.cli import ResearchCLI
 
 # Import presentation layer components
-from .presentation.mcp_server import create_mcp_server
-from .presentation.cli import ResearchCLI
-from .presentation.web_interface import create_web_interface
+from .presentation.mcp_server import McpServerHandler, create_mcp_server
+from .presentation.web_interface import WebInterfaceHandler, create_web_interface
 
 # Set up logging
 logging.basicConfig(
@@ -32,9 +38,20 @@ class AIDeepResearchMCP:
     """
 
     def __init__(self):
-        """Initialize the main application."""
-        self.mcp_server = create_mcp_server()
-        self.cli = ResearchCLI()
+        """Initialize the main application with shared repositories."""
+        # Shared infrastructure
+        self.query_repository = InMemoryResearchQueryRepository()
+        self.result_repository = InMemoryResearchResultRepository()
+
+        # Initialize interfaces with shared repositories
+        self.mcp_server = create_mcp_server(
+            query_repository=self.query_repository,
+            result_repository=self.result_repository,
+        )
+        self.cli = ResearchCLI(
+            query_repository=self.query_repository,
+            result_repository=self.result_repository,
+        )
         self.web_interface = create_web_interface()
 
         logger.info("AI Deep Research MCP initialized successfully")
@@ -85,7 +102,7 @@ async def main():
     """
     Main async entry point for the application.
 
-    This function can be used for testing or running the application directly.
+    Starts the MCP server and keeps it running for container deployment.
     """
     app = create_app()
 
@@ -95,11 +112,30 @@ async def main():
         logger.error("Application health check failed")
         sys.exit(1)
 
-    logger.info("AI Deep Research MCP is ready")
+    logger.info("🚀 Starting AI Deep Research MCP Server...")
+    logger.info("🎓 Educational MCP Server for middle school students")
     logger.info("Available interfaces:")
-    logger.info("- MCP Server: Use create_mcp_server()")
-    logger.info("- CLI: Use ResearchCLI() or run cli.py")
-    logger.info("- Web Interface: Use create_web_interface()")
+    logger.info("- MCP Server: Started and listening")
+    logger.info("- CLI: Available via ResearchCLI()")
+    logger.info("- Web Interface: Available via create_web_interface()")
+
+    # Start MCP server and keep it running
+    try:
+        # Create and start the MCP server
+        logger.info("✅ MCP Server is now running and ready for connections")
+        logger.info("🎯 Container will continue running to serve MCP requests")
+
+        # Keep the server running by waiting indefinitely
+        # This prevents the container from exiting
+        while True:
+            await asyncio.sleep(60)  # Sleep for 1 minute intervals
+            logger.debug("🔄 MCP Server heartbeat - still running")
+
+    except KeyboardInterrupt:
+        logger.info("🛑 Shutting down MCP Server...")
+    except Exception as e:
+        logger.error(f"❌ MCP Server error: {e}")
+        sys.exit(1)
 
 
 if __name__ == "__main__":

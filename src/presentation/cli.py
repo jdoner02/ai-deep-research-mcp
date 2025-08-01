@@ -5,19 +5,19 @@ Provides a command-line interface for interacting with the AI Deep Research syst
 Useful for testing, automation, and direct interaction outside of MCP protocol.
 """
 
+import argparse
 import asyncio
 import json
 import sys
-from typing import List, Optional
-import argparse
 from dataclasses import asdict
+from typing import List, Optional
 
 from ..application.use_cases import (
+    CreateResearchQueryRequest,
     CreateResearchQueryUseCase,
+    ExecuteResearchRequest,
     ExecuteResearchUseCase,
     ResearchOrchestrationService,
-    CreateResearchQueryRequest,
-    ExecuteResearchRequest,
 )
 from ..infrastructure.repositories import (
     InMemoryResearchQueryRepository,
@@ -33,11 +33,15 @@ class ResearchCLI:
     useful for testing and automation.
     """
 
-    def __init__(self):
+    def __init__(
+        self,
+        query_repository: Optional["InMemoryResearchQueryRepository"] = None,
+        result_repository: Optional["InMemoryResearchResultRepository"] = None,
+    ):
         """Initialize CLI with dependency injection."""
         # Infrastructure dependencies
-        self.query_repository = InMemoryResearchQueryRepository()
-        self.result_repository = InMemoryResearchResultRepository()
+        self.query_repository = query_repository or InMemoryResearchQueryRepository()
+        self.result_repository = result_repository or InMemoryResearchResultRepository()
 
         # Application use cases
         self.create_query_use_case = CreateResearchQueryUseCase(

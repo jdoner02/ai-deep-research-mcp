@@ -26,31 +26,29 @@ infrastructure to provide real academic research capabilities.
 """
 
 import asyncio
-from dataclasses import dataclass, field
-from typing import List, Optional, Dict, Any
-from datetime import datetime
-import uuid
 import logging
+import uuid
+from dataclasses import dataclass, field
+from datetime import datetime
+from typing import Any, Dict, List, Optional
 
 from ..domain.entities import (
-    ResearchQuery,
-    ResearchResult,
-    ResearchSource,
+    DomainException,
+    InvalidQueryException,
     QueryId,
+    QueryNotFoundError,
+    ResearchQuery,
+    ResearchQueryRepository,
     ResearchQueryType,
+    ResearchResult,
+    ResearchResultRepository,
+    ResearchSource,
     ResearchStatus,
     SourceType,
-    ResearchQueryRepository,
-    ResearchResultRepository,
-    InvalidQueryException,
-    DomainException,
-    QueryNotFoundError,
 )
-
 from ..infrastructure.scholarly_sources import (
     UnifiedScholarlySearcher,
 )
-
 
 # Enhanced DTOs for Scholarly Research
 

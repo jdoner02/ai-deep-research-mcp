@@ -1,0 +1,24 @@
+{
+  "name": "ai-deep-research-mcp",
+  "description": "AI Deep Research MCP Server - Educational Research Platform",
+  "version": "1.0.0",
+  "executable": {
+    "command": "python",
+    "args": ["-m", "src"],
+    "cwd": "/Users/jessicadoner/0. Knowledge Manager/ai_deep_research_mcp"
+  },
+  "tools": [
+    {
+      "name": "create_research_query",
+      "description": "Create a new research query with specified parameters"
+    },
+    {
+      "name": "execute_research", 
+      "description": "Execute research based on a created query"
+    },
+    {
+      "name": "orchestrate_research",
+      "description": "End-to-end research orchestration from query to results"
+    }
+  ]
+}

@@ -10,24 +10,25 @@ This test suite validates:
 6. Error handling and edge cases
 """
 
-import pytest
 import asyncio
-from unittest.mock import Mock, AsyncMock, patch
 from datetime import datetime
-from typing import Dict, Any, List
+from typing import Any, Dict, List
+from unittest.mock import AsyncMock, Mock, patch
 
+import pytest
+
+from src.application.scholarly_use_cases import (
+    ScholarlyPaperResult,
+    ScholarlySearchRequest,
+    ScholarlySearchResponse,
+)
+from src.domain.entities import ResearchQuery, ResearchResult, ResearchStatus
+from src.infrastructure.scholarly_sources import ScholarlyPaper
 from src.presentation.web_interface import (
     WebInterfaceHandler,
     WebUIComponents,
     create_web_interface,
 )
-from src.application.scholarly_use_cases import (
-    ScholarlySearchRequest,
-    ScholarlySearchResponse,
-    ScholarlyPaperResult,
-)
-from src.infrastructure.scholarly_sources import ScholarlyPaper
-from src.domain.entities import ResearchQuery, ResearchResult, ResearchStatus
 
 
 class TestWebInterfaceHandler:
@@ -183,16 +184,19 @@ class TestWebInterfaceHandler:
             )
         ]
 
-        with patch.object(
-            web_interface.create_query_use_case,
-            "execute",
-            new_callable=AsyncMock,
-            return_value=mock_create_response,
-        ), patch.object(
-            web_interface.enhanced_orchestration,
-            "execute_enhanced_research",
-            new_callable=AsyncMock,
-            return_value=mock_result,
+        with (
+            patch.object(
+                web_interface.create_query_use_case,
+                "execute",
+                new_callable=AsyncMock,
+                return_value=mock_create_response,
+            ),
+            patch.object(
+                web_interface.enhanced_orchestration,
+                "execute_enhanced_research",
+                new_callable=AsyncMock,
+                return_value=mock_result,
+            ),
         ):
             result = await web_interface.handle_enhanced_research_request(request_data)
 
@@ -226,17 +230,20 @@ class TestWebInterfaceHandler:
         mock_result.completed_at = datetime.now()
         mock_result.sources = []
 
-        with patch.object(
-            web_interface.create_query_use_case,
-            "execute",
-            new_callable=AsyncMock,
-            return_value=mock_create_response,
-        ), patch.object(
-            web_interface.enhanced_orchestration,
-            "execute_enhanced_research",
-            new_callable=AsyncMock,
-            return_value=mock_result,
-        ) as mock_enhanced:
+        with (
+            patch.object(
+                web_interface.create_query_use_case,
+                "execute",
+                new_callable=AsyncMock,
+                return_value=mock_create_response,
+            ),
+            patch.object(
+                web_interface.enhanced_orchestration,
+                "execute_enhanced_research",
+                new_callable=AsyncMock,
+                return_value=mock_result,
+            ) as mock_enhanced,
+        ):
             result = await web_interface.handle_enhanced_research_request(request_data)
 
             # Verify enhanced research was called with include_scholarly=False

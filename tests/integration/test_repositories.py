@@ -5,14 +5,15 @@ Tests the infrastructure layer repository implementations
 against the domain interfaces to ensure they work correctly together.
 """
 
-import pytest
 from datetime import datetime, timedelta
 
+import pytest
+
 from src.domain.entities import (
-    ResearchQuery,
-    ResearchResult,
     QueryId,
+    ResearchQuery,
     ResearchQueryType,
+    ResearchResult,
     ResearchStatus,
 )
 from src.infrastructure.repositories import (

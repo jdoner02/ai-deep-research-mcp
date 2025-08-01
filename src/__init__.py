@@ -18,17 +18,18 @@ Key Features:
 - Professional software architecture
 """
 
-# Core imports - individual modules can be imported as needed
-from .domain.entities import ResearchQuery, ResearchResult, ResearchSource, QueryId
+from .__main__ import AIDeepResearchMCP, create_app
 from .application.use_cases import (
     CreateResearchQueryUseCase,
     ExecuteResearchUseCase,
     ResearchOrchestrationService,
 )
-from .presentation.mcp_server import create_mcp_server
+
+# Core imports - individual modules can be imported as needed
+from .domain.entities import QueryId, ResearchQuery, ResearchResult, ResearchSource
 from .presentation.cli import ResearchCLI
+from .presentation.mcp_server import create_mcp_server
 from .presentation.web_interface import create_web_interface
-from .__main__ import create_app, AIDeepResearchMCP
 
 __version__ = "1.0.0"
 __author__ = "AI Deep Research MCP Team"

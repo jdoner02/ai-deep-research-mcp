@@ -16,20 +16,21 @@ Why this matters:
 - Reference managers need exact format compliance
 """
 
-import pytest
-from unittest.mock import Mock, AsyncMock
 from datetime import datetime
+from unittest.mock import AsyncMock, Mock
+
+import pytest
 
 from src.application.scholarly_use_cases import (
     ScholarlyResearchUseCase,
     ScholarlySearchRequest,
     ScholarlySearchResponse,
 )
-from src.presentation.web_interface import WebInterfaceHandler
 from src.infrastructure.repositories import (
     InMemoryResearchQueryRepository,
     InMemoryResearchResultRepository,
 )
+from src.presentation.web_interface import WebInterfaceHandler
 
 
 class TestCitationExport:

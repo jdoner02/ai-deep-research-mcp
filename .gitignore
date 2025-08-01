@@ -259,3 +259,43 @@ web_interface/data/vector_store/
 # Logs
 *.log
 logs/
+
+# MCP Server specific files
+mcp-server.pid
+mcp-*.sock
+.mcp-cache/
+
+# Docker specific
+.docker/
+docker-compose.override.yml
+.env
+
+# Security reports (may contain sensitive info)
+security_report.json
+safety_report.json
+bandit_report.json
+
+# Professional development artifacts
+.coverage.*
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.black_cache/
+
+# AI/ML artifacts
+models/
+*.model
+*.pkl
+*.joblib
+embeddings/
+vector_db/
+
+# Educational temporary files
+student_work/
+educational_temp/
+demo_data/
+
+# Performance monitoring
+profiling/
+*.prof
+*.pstats
