@@ -1,15 +1,14 @@
 """
 AI Deep Research MCP - Main Entry Point
 
-This module provides the main entry point and configuration for the
-AI Deep Research MCP system following Clean Architecture principles.
+This module serves as the primary entry point for the AI Deep Research MCP system.
+It provides educational examples of how to structure professional Python applications.
 """
 
 import asyncio
 import logging
 import sys
 from pathlib import Path
-from typing import Optional
 
 # Import infrastructure for shared repositories
 from .infrastructure.repositories import (
@@ -19,8 +18,11 @@ from .infrastructure.repositories import (
 from .presentation.cli import ResearchCLI
 
 # Import presentation layer components
-from .presentation.mcp_server import McpServerHandler, create_mcp_server
-from .presentation.web_interface import WebInterfaceHandler, create_web_interface
+from .presentation.mcp_server import create_mcp_server
+from .presentation.web_interface import create_web_interface
+
+# Add src to path for imports - Educational note: This ensures our modules can be found
+sys.path.insert(0, str(Path(__file__).parent))
 
 # Set up logging
 logging.basicConfig(

@@ -1,0 +1,64 @@
+{
+  "name": "AI Deep Research MCP Development",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "ai-deep-research-mcp",
+  "workspaceFolder": "/app",
+  
+  // Educational: VS Code extensions for Python and MCP development
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.flake8",
+        "ms-python.black-formatter",
+        "ms-python.isort",
+        "ms-python.mypy-type-checker",
+        "ms-toolsai.jupyter",
+        "ms-vscode.test-adapter-converter",
+        "littlefoxteam.vscode-python-test-adapter",
+        "ms-azuretools.vscode-docker",
+        "redhat.vscode-yaml",
+        "ms-vscode.vscode-json"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/opt/venv/bin/python",
+        "python.linting.enabled": true,
+        "python.linting.flake8Enabled": true,
+        "python.formatting.provider": "black",
+        "python.sortImports.args": ["--profile", "black"],
+        "python.testing.pytestEnabled": true,
+        "python.testing.unittestEnabled": false,
+        "python.testing.pytestArgs": [
+          "tests/",
+          "--verbose",
+          "--tb=short"
+        ],
+        "files.associations": {
+          "*.mcp": "json",
+          "mcp-config.json": "json"
+        }
+      }
+    }
+  },
+
+  // Educational: Development features for learning
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+
+  // Educational: Port forwarding for MCP server
+  "forwardPorts": [8000],
+  "portsAttributes": {
+    "8000": {
+      "label": "MCP Server",
+      "onAutoForward": "notify"
+    }
+  },
+
+  // Educational: Post-create commands for setup
+  "postCreateCommand": "echo '🎓 AI Deep Research MCP Development Environment Ready!' && python --version && pip list | grep -E '(flask|mcp|pytest)'",
+  
+  // Educational: Keep container running for development
+  "shutdownAction": "stopCompose"
+}

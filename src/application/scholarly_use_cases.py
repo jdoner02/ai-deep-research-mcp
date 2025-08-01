@@ -19,13 +19,14 @@ Regular Google searches find lots of information, but scholarly sources are spec
 - Include citations so you can verify information
 - More reliable for school projects and serious research
 
-🎯 LEARNING TIP: This file shows how our AI system integrates with real academic databases like arXiv (where scientists publish research papers) and Semantic Scholar (an AI-powered academic search engine).
+🎯 LEARNING TIP: This file shows how our AI system integrates with real academic
+databases like arXiv (where scientists publish research papers) and Semantic
+Scholar (an AI-powered academic search engine).
 
 Enhanced application layer use cases that integrate with scholarly sources
 infrastructure to provide real academic research capabilities.
 """
 
-import asyncio
 import logging
 import uuid
 from dataclasses import dataclass, field
@@ -37,18 +38,14 @@ from ..domain.entities import (
     InvalidQueryException,
     QueryId,
     QueryNotFoundError,
-    ResearchQuery,
     ResearchQueryRepository,
-    ResearchQueryType,
     ResearchResult,
     ResearchResultRepository,
     ResearchSource,
     ResearchStatus,
     SourceType,
 )
-from ..infrastructure.scholarly_sources import (
-    UnifiedScholarlySearcher,
-)
+from ..infrastructure.scholarly_sources import UnifiedScholarlySearcher
 
 # Enhanced DTOs for Scholarly Research
 
@@ -168,7 +165,8 @@ class ScholarlyResearchUseCase:
             )
 
             self.logger.info(
-                f"Scholarly search completed: {len(formatted_papers)} results in {search_time}ms"
+                f"Scholarly search completed: {len(formatted_papers)} results "
+                f"in {search_time}ms"
             )
 
             return response
@@ -249,7 +247,8 @@ class ScholarlyResearchUseCase:
         return "".join(bibtex_entries)
 
     def _export_ris(self, papers: List[Dict[str, Any]]) -> str:
-        """Export papers in RIS format - used by EndNote and other reference managers."""
+        """Export papers in RIS format - used by EndNote and other reference
+        managers."""
         ris_entries = []
 
         for paper in papers:
@@ -463,7 +462,7 @@ class EnhancedResearchOrchestrationService:
 
                     source_type = source_type_map.get(
                         paper_data.get("source_type", "").lower(),
-                        SourceType.CUSTOM,  # Default for academic sources not specifically mapped
+                        SourceType.CUSTOM,  # Default for academic sources
                     )
 
                     source = ResearchSource(
@@ -492,7 +491,8 @@ class EnhancedResearchOrchestrationService:
             self.result_repository.save(result)
 
             self.logger.info(
-                f"Enhanced research completed for query {query_id}: {len(result.sources)} sources"
+                f"Enhanced research completed for query {query_id}: "
+                f"{len(result.sources)} sources"
             )
 
             return result

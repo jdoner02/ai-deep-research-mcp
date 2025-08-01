@@ -5,10 +5,8 @@ Provides the external MCP server interface following the protocol specification.
 Adapts between MCP protocol and our Clean Architecture application layer.
 """
 
-import json
 import logging
-from dataclasses import asdict
-from typing import Any, Dict, List, Optional, Sequence
+from typing import Any, Dict, List, Optional
 
 from ..application.use_cases import (
     CreateResearchQueryRequest,
@@ -17,7 +15,6 @@ from ..application.use_cases import (
     ExecuteResearchUseCase,
     ResearchOrchestrationService,
 )
-from ..domain.entities import ResearchQuery, ResearchResult
 from ..infrastructure.repositories import (
     InMemoryResearchQueryRepository,
     InMemoryResearchResultRepository,
@@ -102,7 +99,8 @@ class McpServerHandler:
             "content": [
                 {
                     "type": "text",
-                    "text": f"Research query created successfully. Query ID: {response.query_id}",
+                    "text": f"Research query created successfully. "
+                    f"Query ID: {response.query_id}",
                 }
             ]
         }
@@ -134,7 +132,7 @@ class McpServerHandler:
             "content": [
                 {
                     "type": "text",
-                    "text": f"Research executed successfully.\n\nResults:\n"
+                    "text": "Research executed successfully.\n\nResults:\n"
                     + "\n".join(results_text),
                 }
             ]
@@ -191,7 +189,8 @@ class McpServerHandler:
                     "properties": {
                         "query": {
                             "type": "string",
-                            "description": "The research question or topic to investigate",
+                            "description": "The research question or topic "
+                            "to investigate",
                         },
                         "sources": {
                             "type": "array",
@@ -229,7 +228,8 @@ class McpServerHandler:
                     "properties": {
                         "query": {
                             "type": "string",
-                            "description": "The research question or topic to investigate",
+                            "description": "The research question or topic "
+                            "to investigate",
                         },
                         "sources": {
                             "type": "array",

@@ -1,6 +1,6 @@
 ---
 mode: agent
-tools: ['changes', 'codebase', 'editFiles', 'extensions', 'fetch', 'findTestFiles', 'githubRepo', 'new', 'openSimpleBrowser', 'problems', 'runCommands', 'runNotebooks', 'runTasks', 'runTests', 'search', 'searchResults', 'terminalLastCommand', 'terminalSelection', 'testFailure', 'usages', 'vscodeAPI', 'github', 'context7', 'sequentialthinking', 'memory', 'configurePythonEnvironment', 'getPythonEnvironmentInfo', 'getPythonExecutableCommand', 'installPythonPackage', 'sonarqube_analyzeFile', 'sonarqube_excludeFiles', 'sonarqube_getPotentialSecurityIssues', 'sonarqube_setUpConnectedMode']
+tools: ['changes', 'codebase', 'editFiles', 'extensions', 'fetch', 'findTestFiles', 'githubRepo', 'new', 'openSimpleBrowser', 'problems', 'runCommands', 'runTests', 'search', 'searchResults', 'terminalLastCommand', 'terminalSelection', 'testFailure', 'sequentialthinking', 'memory', 'github', 'configurePythonEnvironment', 'getPythonEnvironmentInfo', 'getPythonExecutableCommand', 'installPythonPackage']
 description: "Educational Command Architect for AI Deep Research MCP - Orchestrates the transformation of a production system into an educational masterpiece for middle school students while maintaining full functionality."
 ---
 

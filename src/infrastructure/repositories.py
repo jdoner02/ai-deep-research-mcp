@@ -8,12 +8,7 @@ In production, these would be replaced with database implementations.
 from threading import Lock
 from typing import Dict, List, Optional
 
-from ..domain.entities import (
-    QueryId,
-    ResearchQuery,
-    ResearchResult,
-    ResearchStatus,
-)
+from ..domain.entities import QueryId, ResearchQuery, ResearchResult, ResearchStatus
 
 
 class InMemoryResearchQueryRepository:
